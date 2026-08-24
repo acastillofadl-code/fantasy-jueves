@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>FANTASY JUEVES · Temporada 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800&family=Karla:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A1120; --felt:#111D33; --felt-2:#182742; --line:#284066;
+  --line-soft:rgba(40,64,102,.62); --felt-hover:rgba(24,39,66,.55); --ink-blur:rgba(10,17,32,.94);
+  --bone:#E7ECF6; --musgo:#8397B8; --gold:#F0AE33; --rojo:#F0685A;
+  --acc-glow:rgba(240,174,51,.12); --acc-line:rgba(240,174,51,.45); --acc-tint:rgba(240,174,51,.08);
+  --acc-fade:rgba(240,174,51,.42); --rojo-fade:rgba(240,104,90,.42); --rojo-line:rgba(240,104,90,.48);
+  --display:'Big Shoulders Display','Arial Narrow',sans-serif;
+  --body:'Karla',-apple-system,'Segoe UI',sans-serif;
+  --mono:'DM Mono','SFMono-Regular',Consolas,monospace;
+  --wrap:1080px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0; background:var(--ink); color:var(--bone); font-family:var(--body); font-size:16px; line-height:1.5}
+body::before{content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:radial-gradient(1200px 600px at 50% -10%, var(--acc-glow), transparent 70%)}
+.wrap{max-width:var(--wrap); margin:0 auto; padding:0 20px; position:relative; z-index:1}
+a{color:var(--gold)}
+:focus-visible{outline:2px solid var(--gold); outline-offset:3px; border-radius:2px}
+
+.top{padding:38px 0 24px}
+.eyebrow{font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--musgo); margin:0 0 10px}
+.liga-nombre{font-family:var(--display); font-weight:800; font-size:clamp(46px,11vw,104px);
+  line-height:.86; letter-spacing:-.01em; margin:0; text-transform:uppercase}
+.liga-nombre em{font-style:normal; color:var(--gold); display:block}
+.pills{display:flex; gap:8px; flex-wrap:wrap; margin-top:16px}
+.estado{display:inline-flex; align-items:center; gap:8px; padding:5px 12px 5px 10px;
+  border:1px solid var(--line); border-radius:99px; font-family:var(--mono); font-size:11px;
+  letter-spacing:.06em; color:var(--musgo); text-transform:uppercase}
+.estado .punto{width:7px; height:7px; border-radius:99px; background:var(--musgo)}
+.estado.vivo{color:var(--gold); border-color:var(--acc-line)}
+.estado.vivo .punto{background:var(--gold)}
+.estado.mal{color:var(--rojo); border-color:var(--rojo-line)}
+.estado.mal .punto{background:var(--rojo)}
+
+.host-band{
+  margin-top:26px; border:1px solid var(--acc-line); border-radius:4px;
+  background:linear-gradient(180deg,var(--acc-glow),transparent);
+  padding:20px 24px; display:grid; grid-template-columns:1fr auto; gap:20px; align-items:center;
+}
+.host-band .k{font-family:var(--mono); font-size:11px; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--gold); margin-bottom:4px}
+.host-band .quien{font-family:var(--display); font-weight:800; line-height:.95;
+  font-size:clamp(30px,6vw,54px); text-transform:uppercase}
+.host-band .cuando{font-size:14px; color:var(--musgo); margin-top:6px}
+.host-band .faltan{text-align:right; white-space:nowrap}
+.host-band .faltan .n{font-family:var(--display); font-weight:800; font-size:44px; line-height:1; color:var(--gold)}
+.host-band .faltan .u{font-family:var(--mono); font-size:10px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--musgo)}
+
+.cal{border-top:1px solid var(--line)}
+.cal-row{display:grid; grid-template-columns:52px 104px 1fr auto; gap:14px; align-items:center;
+  padding:12px 0; border-bottom:1px solid var(--line-soft)}
+.cal-row.pasado{opacity:.42}
+.cal-row.proximo{background:var(--acc-tint)}
+.cal-row .sem{font-family:var(--mono); font-size:11px; color:var(--musgo); letter-spacing:.08em}
+.cal-row .fec{font-family:var(--mono); font-size:14px}
+.cal-row .anf{font-weight:700; font-size:15px}
+.cal-row .nota{font-size:12px; color:var(--musgo)}
+.cal-row .tag{font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--gold); border:1px solid var(--acc-line); border-radius:99px; padding:3px 9px}
+
+.bote{margin-top:26px; border:1px solid var(--line); border-radius:4px; padding:26px 24px 22px;
+  background:linear-gradient(180deg,var(--felt-2),var(--felt));
+  display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center}
+.bote-cifra .k{font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--musgo); margin-bottom:2px}
+.bote-cifra .v{font-family:var(--display); font-weight:800; font-size:clamp(50px,9vw,82px); line-height:.9; color:var(--gold)}
+.premios{display:flex; flex-wrap:wrap; gap:8px}
+.premio{border:1px solid var(--line); border-radius:3px; padding:7px 11px; background:rgba(0,0,0,.18)}
+.premio .n{font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--musgo); display:block}
+.premio .m{font-family:var(--display); font-weight:700; font-size:23px; line-height:1.1}
+
+.nav{position:sticky; top:0; z-index:20; margin-top:34px;
+  background:var(--ink-blur); backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
+.nav-in{display:flex; gap:4px; max-width:var(--wrap); margin:0 auto; padding:0 20px; overflow-x:auto}
+.nav a{font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--musgo); text-decoration:none; padding:15px 14px; white-space:nowrap; border-bottom:2px solid transparent}
+.nav a:hover{color:var(--bone)}
+.nav a.on{color:var(--gold); border-bottom-color:var(--gold)}
+.nav button{background:none; border:none; cursor:pointer; font-family:var(--mono); font-size:12px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--musgo); padding:15px 14px;
+  white-space:nowrap; border-bottom:2px solid transparent}
+.nav button:hover{color:var(--bone)}
+.nav button[aria-selected="true"]{color:var(--gold); border-bottom-color:var(--gold)}
+section[hidden]{display:none}
+
+.espn{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px}
+.espn .bloque h3{color:var(--bone)}
+.ajuste{display:flex; justify-content:space-between; align-items:flex-start; gap:14px;
+  padding:8px 0; border-bottom:1px solid var(--line-soft); font-size:14px}
+.espn .bloque .ajuste:last-child{border-bottom:none}
+.ajuste .k{color:var(--musgo); flex:1 1 42%; min-width:0}
+.ajuste .v{font-family:var(--mono); text-align:right; white-space:normal; overflow-wrap:break-word; flex:1 1 52%; min-width:0}
+.ajuste .v.falta{color:var(--rojo); font-family:var(--body); font-size:13px}
+
+section{padding:52px 0 12px; scroll-margin-top:56px}
+.sec-cab{display:flex; align-items:baseline; gap:14px; margin-bottom:6px; flex-wrap:wrap}
+.sec-cab h2{font-family:var(--display); font-weight:800; text-transform:uppercase;
+  font-size:clamp(30px,5vw,46px); line-height:1; margin:0; letter-spacing:-.005em}
+.sec-cab .sub{color:var(--musgo); font-size:14px}
+.sec-nota{color:var(--musgo); font-size:14px; margin:0 0 26px; max-width:64ch}
+
+.raya{border-top:1px solid var(--line)}
+.raya-row{display:grid; grid-template-columns:190px 1fr 108px; align-items:center; gap:16px;
+  padding:11px 0; border-bottom:1px solid var(--line-soft)}
+.raya-quien{min-width:0}
+.raya-quien .nom{font-weight:700; font-size:15px; white-space:normal; overflow-wrap:break-word}
+.raya-quien .eq{font-family:var(--mono); font-size:11px; color:var(--musgo); white-space:normal; overflow-wrap:break-word}
+.raya-track{display:flex; position:relative; height:22px}
+.raya-track::before{content:''; position:absolute; left:50%; top:-11px; bottom:-11px; width:1px; background:var(--line)}
+.raya-half{flex:1; display:flex; align-items:center; min-width:0}
+.raya-half.izq{justify-content:flex-end}
+.raya-half.der{justify-content:flex-start}
+.barra{height:13px; width:0; border-radius:2px; transition:width .7s cubic-bezier(.2,.7,.3,1)}
+.raya-half.izq .barra{background:linear-gradient(270deg,var(--rojo),var(--rojo-fade))}
+.raya-half.der .barra{background:linear-gradient(90deg,var(--gold),var(--acc-fade))}
+.raya-monto{font-family:var(--mono); font-size:15px; text-align:right; white-space:nowrap}
+.raya-monto.debe{color:var(--rojo)}
+.raya-monto.favor{color:var(--gold)}
+.raya-monto.cero{color:var(--musgo)}
+.raya-pies{display:flex; gap:26px; flex-wrap:wrap; margin-top:22px}
+.pie .k{font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--musgo)}
+.pie .v{font-family:var(--display); font-weight:700; font-size:30px; line-height:1.1}
+.pie .v.rojo{color:var(--rojo)}
+
+.tabla-scroll{overflow-x:auto; border-top:1px solid var(--line)}
+table{width:100%; border-collapse:collapse; min-width:620px}
+thead th{font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--musgo); font-weight:400; text-align:right; padding:12px 10px;
+  border-bottom:1px solid var(--line); white-space:nowrap}
+thead th.izq{text-align:left}
+tbody td{padding:13px 10px; border-bottom:1px solid var(--line-soft); text-align:right;
+  font-family:var(--mono); font-size:14px; white-space:nowrap}
+tbody td.izq{text-align:left; font-family:var(--body)}
+tbody tr:hover{background:var(--felt-hover)}
+.pos{color:var(--musgo); width:38px}
+.equipo{font-weight:700}
+.mgr{color:var(--musgo); font-size:13px}
+.destacado td{background:var(--acc-tint)}
+
+.movs{border-top:1px solid var(--line); margin-top:8px}
+.mov{display:grid; grid-template-columns:64px 1fr auto; gap:14px; align-items:center;
+  padding:11px 0; border-bottom:1px solid var(--line-soft)}
+.mov .sem{font-family:var(--mono); font-size:11px; color:var(--musgo); letter-spacing:.08em}
+.mov .qq .n{font-weight:500; font-size:14px}
+.mov .qq .c{font-size:12px; color:var(--musgo)}
+.mov .mm{font-family:var(--mono); font-size:14px}
+.mov .mm.debe{color:var(--rojo)}
+.mov .mm.favor{color:var(--gold)}
+
+.reglas{display:grid; grid-template-columns:repeat(auto-fit,minmax(272px,1fr)); gap:16px}
+.bloque{border:1px solid var(--line); border-radius:4px; padding:18px 18px 6px; background:var(--felt)}
+.bloque h3{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--gold); margin:0 0 12px; font-weight:500}
+.regla{display:flex; justify-content:space-between; align-items:flex-start; gap:14px;
+  padding:9px 0; border-bottom:1px solid var(--line-soft)}
+.bloque .regla:last-child{border-bottom:none}
+.regla .t{font-size:14px}
+.regla .m{font-family:var(--mono); font-size:14px; white-space:nowrap}
+.regla .m.pos{color:var(--gold)}
+.regla .m.neg{color:var(--rojo)}
+.regla .m.libre{white-space:normal; text-align:right; font-family:var(--body); font-size:13px; color:var(--musgo); max-width:58%}
+
+.voto{border:1px solid var(--acc-line); border-radius:4px; background:var(--acc-tint);
+  padding:20px 20px 8px; margin-bottom:26px}
+.voto h3{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--gold); margin:0 0 4px; font-weight:500}
+.voto .intro{color:var(--musgo); font-size:13px; margin:0 0 14px}
+.cambio{display:grid; grid-template-columns:1fr auto auto auto; gap:12px; align-items:center;
+  padding:10px 0; border-bottom:1px solid var(--line-soft); font-size:14px}
+.voto .cambio:last-of-type{border-bottom:none}
+.cambio .de{font-family:var(--mono); color:var(--musgo); text-decoration:line-through}
+.cambio .fl{color:var(--musgo)}
+.cambio .a{font-family:var(--mono); color:var(--gold)}
+.voto .cierre{font-size:13px; padding:12px 0 8px; border-top:1px solid var(--line-soft); margin-top:6px}
+.voto .cierre.ok{color:var(--musgo)}
+.voto .cierre.mal{color:var(--rojo)}
+
+.vacio{border:1px dashed var(--line); border-radius:4px; padding:34px 24px; text-align:center; color:var(--musgo); font-size:15px}
+.vacio strong{color:var(--bone); display:block; margin-bottom:6px; font-size:17px}
+footer{margin-top:60px; padding:26px 0 46px; border-top:1px solid var(--line);
+  color:var(--musgo); font-size:12px; font-family:var(--mono); line-height:1.8}
+
+@media (max-width:760px){
+  .bote{grid-template-columns:1fr; gap:20px}
+  .host-band{grid-template-columns:1fr}
+  .host-band .faltan{text-align:left}
+  .cal-row{grid-template-columns:44px 1fr; gap:4px 12px}
+  .cal-row .anf{grid-column:1 / -1}
+  .raya-row{grid-template-columns:1fr auto; gap:6px 12px}
+  .raya-quien{grid-column:1}
+  .raya-monto{grid-column:2}
+  .raya-track{grid-column:1 / -1; margin-top:4px}
+  .raya-track::before{top:-4px; bottom:-4px}
+  .cambio{grid-template-columns:1fr; gap:2px}
+  .cambio .fl{display:none}
+}
+@media (prefers-reduced-motion:reduce){ .barra{transition:none} }
+</style>
+</head>
+<body>
+
+<script>
+/* ============================================================
+   CONFIG · lo único que se toca en este archivo.
+   Todo lo demás (inscripción, premios, multas) vive en la hoja.
+   ============================================================ */
+const CONFIG = {
+  liga:      "Fantasy Jueves",
+  temporada: "2026",
+  leagueId:  "",
+
+  // URLs que da Google al publicar cada pestaña como CSV.
+  csvParametros: "",
+  csvTabla:      "",
+  csvSaldos:     "",
+  csvEspn:       "",
+  csvTnf:        "",
+
+  // Fecha y hora del draft en formato AAAA-MM-DD HH:MM (24h). Vacio si no hay fecha.
+  draft:         "2026-08-27 20:00",
+
+  resaltar: "Alejandro Castillo Fadl"
+};
+
+// Copia de respaldo: se usa mientras no conectes la hoja.
+const DEMO_PARAMS = [
+  {
+    "Bloque": "Entrada y bote",
+    "Concepto": "Equipos en la liga",
+    "Vigente": 10,
+    "Propuesta": "",
+    "Tipo": "equipos",
+    "Nota": ""
+  },
+  {
+    "Bloque": "Entrada y bote",
+    "Concepto": "Inscripcion por equipo",
+    "Vigente": -5000,
+    "Propuesta": "",
+    "Tipo": "inscripcion",
+    "Nota": ""
+  },
+  {
+    "Bloque": "Premios de temporada",
+    "Concepto": "Campeon - Super Bowl",
+    "Vigente": 25000,
+    "Propuesta": "",
+    "Tipo": "premio",
+    "Nota": ""
+  },
+  {
+    "Bloque": "Premios de temporada",
+    "Concepto": "Subcampeon",
+    "Vigente": 10000,
+    "Propuesta": "",
+    "Tipo": "premio",
+    "Nota": ""
+  },
+  {
+    "Bloque": "Premios de temporada",
+    "Concepto": "3er lugar - playoffs",
+    "Vigente": 5000,
+    "Propuesta": "",
+    "Tipo": "premio",
+    "Nota": ""
+  },
+  {
+    "Bloque": "Premios de temporada",
+    "Concepto": "Liga - mejor record",
+    "Vigente": 10000,
+    "Propuesta": "",
+    "Tipo": "premio",
+    "Nota": ""
+  },
+  {
+    "Bloque": "Premios de temporada",
+    "Concepto": "Anillo de campeon",
+    "Vigente": "",
+    "Propuesta": "",
+    "Tipo": "texto",
+    "Nota": "Se entrega al campeon del Super Bowl"
+  },
+  {
+    "Bloque": "Semanales",
+    "Concepto": "Mayor puntaje de la semana",
+    "Vigente": 400,
+    "Propuesta": "",
+    "Tipo": "semanal",
+    "Nota": ""
+  },
+  {
+    "Bloque": "Semanales",
+    "Concepto": "Penultimo de la semana",
+    "Vigente": -150,
+    "Propuesta": "",
+    "Tipo": "semanal",
+    "Nota": ""
+  },
+  {
+    "Bloque": "Semanales",
+    "Concepto": "Ultimo de la semana",
+    "Vigente": -250,
+    "Propuesta": "",
+    "Tipo": "semanal",
+    "Nota": ""
+  },
+  {
+    "Bloque": "Castigo de temporada",
+    "Concepto": "Ultimo lugar - en especie",
+    "Vigente": "",
+    "Propuesta": "",
+    "Tipo": "texto",
+    "Nota": "Se define en el draft. Propuesta hasta ahora: playera personalizada + comida para toda la liga, a mas tardar un mes despues del Super Bowl"
+  },
+  {
+    "Bloque": "Multas de asistencia",
+    "Concepto": "No asistir al TNF sin avisar",
+    "Vigente": 0,
+    "Propuesta": -1500,
+    "Tipo": "multa",
+    "Nota": ""
+  },
+  {
+    "Bloque": "Multas de asistencia",
+    "Concepto": "Cancelar con menos de 24 horas",
+    "Vigente": 0,
+    "Propuesta": -500,
+    "Tipo": "multa",
+    "Nota": ""
+  },
+  {
+    "Bloque": "Multas de asistencia",
+    "Concepto": "No cumplir tu turno de anfitrion",
+    "Vigente": 0,
+    "Propuesta": -4000,
+    "Tipo": "multa",
+    "Nota": "No programar tu evento y no hacer trade en caso de no poder ser host. Ultima posibilidad: organizarlo sin asistir (pagar la cuenta en un restaurante)."
+  },
+  {
+    "Bloque": "Multas de asistencia",
+    "Concepto": "Destino del dinero",
+    "Vigente": "",
+    "Propuesta": "",
+    "Tipo": "texto",
+    "Nota": "Las multas generadas antes de Thanksgiving se usan para el evento de Thanksgiving; las generadas despues de Thanksgiving se usan para el evento del Super Bowl."
+  },
+  {
+    "Bloque": "Multas de asistencia",
+    "Concepto": "Asistencia minima",
+    "Vigente": "",
+    "Propuesta": "No cumplir con al menos 7 asistencias en el año quita la posibilidad de seguir en esta liga por un periodo de al menos un año; el regreso queda sujeto a disponibilidad. Thanksgiving cuenta cada juego como 1 asistencia. El viaje anual cuenta 2 asistencias.",
+    "Tipo": "texto",
+    "Nota": ""
+  },
+  {
+    "Bloque": "Obligaciones",
+    "Concepto": "Anfitrion del TNF",
+    "Vigente": "",
+    "Propuesta": "",
+    "Tipo": "texto",
+    "Nota": "Cada semana le toca a uno: pone cena y algo de tomar"
+  },
+  {
+    "Bloque": "Obligaciones",
+    "Concepto": "Si no puedes tu jueves",
+    "Vigente": "",
+    "Propuesta": "",
+    "Tipo": "texto",
+    "Nota": "Haz trade de tu turno con otro miembro"
+  },
+  {
+    "Bloque": "Obligaciones",
+    "Concepto": "Reglas de juego y puntaje",
+    "Vigente": "",
+    "Propuesta": "",
+    "Tipo": "texto",
+    "Nota": "Las que estipula ESPN"
+  }
+];
+const DEMO_TABLA  = [
+  {
+    "Pos": 1,
+    "Equipo": "Monsters of the Midway",
+    "Manager": "Alejandro Castillo Fadl",
+    "G": "",
+    "P": "",
+    "E": "",
+    "PF": "",
+    "PC": ""
+  },
+  {
+    "Pos": 2,
+    "Equipo": "Morett",
+    "Manager": "Por definir - Morett",
+    "G": "",
+    "P": "",
+    "E": "",
+    "PF": "",
+    "PC": ""
+  },
+  {
+    "Pos": 3,
+    "Equipo": "Niner Gang",
+    "Manager": "Carlos Mateos Landeros",
+    "G": "",
+    "P": "",
+    "E": "",
+    "PF": "",
+    "PC": ""
+  },
+  {
+    "Pos": 4,
+    "Equipo": "Mighty Eagles",
+    "Manager": "Por definir - Mighty Eagles",
+    "G": "",
+    "P": "",
+    "E": "",
+    "PF": "",
+    "PC": ""
+  },
+  {
+    "Pos": 5,
+    "Equipo": "Kekas 25",
+    "Manager": "Por definir - Kekas 25",
+    "G": "",
+    "P": "",
+    "E": "",
+    "PF": "",
+    "PC": ""
+  },
+  {
+    "Pos": 6,
+    "Equipo": "La mazaneta",
+    "Manager": "Por definir - La mazaneta",
+    "G": "",
+    "P": "",
+    "E": "",
+    "PF": "",
+    "PC": ""
+  },
+  {
+    "Pos": 7,
+    "Equipo": "Ayahuascas boys",
+    "Manager": "Por definir - Ayahuascas boys",
+    "G": "",
+    "P": "",
+    "E": "",
+    "PF": "",
+    "PC": ""
+  },
+  {
+    "Pos": 8,
+    "Equipo": "Seba IR",
+    "Manager": "Por definir - Seba IR",
+    "G": "",
+    "P": "",
+    "E": "",
+    "PF": "",
+    "PC": ""
+  },
+  {
+    "Pos": 9,
+    "Equipo": "AGUS",
+    "Manager": "Agustín Farias",
+    "G": "",
+    "P": "",
+    "E": "",
+    "PF": "",
+    "PC": ""
+  },
+  {
+    "Pos": 10,
+    "Equipo": "Broncos Polacos",
+    "Manager": "Por definir - Broncos Polacos",
+    "G": "",
+    "P": "",
+    "E": "",
+    "PF": "",
+    "PC": ""
+  }
+];
+// Proximos jueves: partido, fecha y hora. Se llena con el calendario de ESPN, se va actualizando semana a semana.
+const DEMO_PROXIMOS = [];
+// Resultado de la semana: ganador y los dos perdedores, en orden. Se llena con la captura de ESPN de cada semana.
+const DEMO_RESULTADOS = [];
+const DEMO_ESPN   = [
+  {
+    "Seccion": "Basicos",
+    "Ajuste": "Nombre en ESPN",
+    "Valor": "FANTASY JUEVES"
+  },
+  {
+    "Seccion": "Basicos",
+    "Ajuste": "Numero de equipos",
+    "Valor": "10"
+  },
+  {
+    "Seccion": "Basicos",
+    "Ajuste": "Tipo de puntuacion",
+    "Valor": "Head to Head Points, con recepcion (PPR)"
+  },
+  {
+    "Seccion": "Basicos",
+    "Ajuste": "Formato",
+    "Valor": "League Manager"
+  },
+  {
+    "Seccion": "Basicos",
+    "Ajuste": "Liga visible al publico",
+    "Valor": "No"
+  },
+  {
+    "Seccion": "Basicos",
+    "Ajuste": "Auto Reactivate",
+    "Valor": "No"
+  },
+  {
+    "Seccion": "Basicos",
+    "Ajuste": "Lineup Protection",
+    "Valor": "Apagada"
+  },
+  {
+    "Seccion": "Draft",
+    "Ajuste": "Tipo",
+    "Valor": "Snake"
+  },
+  {
+    "Seccion": "Draft",
+    "Ajuste": "Fecha",
+    "Valor": "27 de agosto de 2026, 8:00 PM CST"
+  },
+  {
+    "Seccion": "Draft",
+    "Ajuste": "Tiempo por pick",
+    "Valor": "45 segundos"
+  },
+  {
+    "Seccion": "Draft",
+    "Ajuste": "Orden",
+    "Valor": "Se sortea una hora antes del draft"
+  },
+  {
+    "Seccion": "Roster",
+    "Ajuste": "Tamano del roster",
+    "Valor": "13"
+  },
+  {
+    "Seccion": "Roster",
+    "Ajuste": "Titulares",
+    "Valor": "9"
+  },
+  {
+    "Seccion": "Roster",
+    "Ajuste": "Banca",
+    "Valor": "4"
+  },
+  {
+    "Seccion": "Roster",
+    "Ajuste": "Quarterback (QB)",
+    "Valor": "1 titular - maximo 4"
+  },
+  {
+    "Seccion": "Roster",
+    "Ajuste": "Running Back (RB)",
+    "Valor": "2 titulares - maximo 8"
+  },
+  {
+    "Seccion": "Roster",
+    "Ajuste": "Running Back / Wide Receiver (RB/WR)",
+    "Valor": "1 titular"
+  },
+  {
+    "Seccion": "Roster",
+    "Ajuste": "Wide Receiver (WR)",
+    "Valor": "2 titulares - maximo 8"
+  },
+  {
+    "Seccion": "Roster",
+    "Ajuste": "Tight End (TE)",
+    "Valor": "1 titular - maximo 3"
+  },
+  {
+    "Seccion": "Roster",
+    "Ajuste": "Defensa / Especiales (D/ST)",
+    "Valor": "1 titular - maximo 3"
+  },
+  {
+    "Seccion": "Roster",
+    "Ajuste": "Pateador (K)",
+    "Valor": "1 titular - maximo 3"
+  },
+  {
+    "Seccion": "Roster",
+    "Ajuste": "Injured Reserve (IR)",
+    "Valor": "0 slots"
+  },
+  {
+    "Seccion": "Roster",
+    "Ajuste": "Posiciones sin usar",
+    "Valor": "TQB, FLEX, WR/TE, OP, DT, DE, LB, DL, CB, S, DB, DP, P y HC"
+  },
+  {
+    "Seccion": "Puntuacion - pase",
+    "Ajuste": "Cada 25 yardas de pase",
+    "Valor": "1"
+  },
+  {
+    "Seccion": "Puntuacion - pase",
+    "Ajuste": "TD de pase",
+    "Valor": "4"
+  },
+  {
+    "Seccion": "Puntuacion - pase",
+    "Ajuste": "Intercepcion lanzada",
+    "Valor": "-2"
+  },
+  {
+    "Seccion": "Puntuacion - pase",
+    "Ajuste": "Partido de 300 a 399 yardas",
+    "Valor": "2 de bono"
+  },
+  {
+    "Seccion": "Puntuacion - pase",
+    "Ajuste": "Partido de 400 o mas yardas",
+    "Valor": "3 de bono"
+  },
+  {
+    "Seccion": "Puntuacion - carrera",
+    "Ajuste": "Cada 10 yardas por tierra",
+    "Valor": "1"
+  },
+  {
+    "Seccion": "Puntuacion - carrera",
+    "Ajuste": "TD terrestre",
+    "Valor": "6"
+  },
+  {
+    "Seccion": "Puntuacion - carrera",
+    "Ajuste": "Partido de 100 a 199 yardas",
+    "Valor": "2 de bono"
+  },
+  {
+    "Seccion": "Puntuacion - carrera",
+    "Ajuste": "Partido de 200 o mas yardas",
+    "Valor": "3 de bono"
+  },
+  {
+    "Seccion": "Puntuacion - recepcion",
+    "Ajuste": "Cada 10 yardas de recepcion",
+    "Valor": "1"
+  },
+  {
+    "Seccion": "Puntuacion - recepcion",
+    "Ajuste": "Cada recepcion (PPR)",
+    "Valor": "1"
+  },
+  {
+    "Seccion": "Puntuacion - recepcion",
+    "Ajuste": "TD de recepcion",
+    "Valor": "6"
+  },
+  {
+    "Seccion": "Puntuacion - recepcion",
+    "Ajuste": "Bono TD de recepcion 40+ yardas",
+    "Valor": "0.5"
+  },
+  {
+    "Seccion": "Puntuacion - recepcion",
+    "Ajuste": "Bono TD de recepcion 50+ yardas",
+    "Valor": "1"
+  },
+  {
+    "Seccion": "Puntuacion - recepcion",
+    "Ajuste": "Partido de 100 a 199 yardas",
+    "Valor": "2 de bono"
+  },
+  {
+    "Seccion": "Puntuacion - recepcion",
+    "Ajuste": "Partido de 200 o mas yardas",
+    "Valor": "3 de bono"
+  },
+  {
+    "Seccion": "Puntuacion - patada",
+    "Ajuste": "Punto extra",
+    "Valor": "1"
+  },
+  {
+    "Seccion": "Puntuacion - patada",
+    "Ajuste": "Gol de campo de 0 a 39 yardas",
+    "Valor": "2"
+  },
+  {
+    "Seccion": "Puntuacion - patada",
+    "Ajuste": "Gol de campo de 40 a 49 yardas",
+    "Valor": "3"
+  },
+  {
+    "Seccion": "Puntuacion - patada",
+    "Ajuste": "Gol de campo de 50 a 59 yardas",
+    "Valor": "4"
+  },
+  {
+    "Seccion": "Puntuacion - patada",
+    "Ajuste": "Gol de campo de 60+ yardas",
+    "Valor": "5"
+  },
+  {
+    "Seccion": "Puntuacion - patada",
+    "Ajuste": "Gol de campo fallado de 0 a 39",
+    "Valor": "-1"
+  },
+  {
+    "Seccion": "Puntuacion - patada",
+    "Ajuste": "Gol de campo fallado de 40 a 49",
+    "Valor": "0.5"
+  },
+  {
+    "Seccion": "Puntuacion - varios",
+    "Ajuste": "TD de retorno de kickoff",
+    "Valor": "6"
+  },
+  {
+    "Seccion": "Puntuacion - varios",
+    "Ajuste": "TD de retorno de despeje",
+    "Valor": "6"
+  },
+  {
+    "Seccion": "Puntuacion - varios",
+    "Ajuste": "Fumble recuperado para TD",
+    "Valor": "6"
+  },
+  {
+    "Seccion": "Puntuacion - varios",
+    "Ajuste": "Fumble perdido",
+    "Valor": "-2"
+  },
+  {
+    "Seccion": "Puntuacion - varios",
+    "Ajuste": "TD por retorno de intercepcion",
+    "Valor": "6"
+  },
+  {
+    "Seccion": "Puntuacion - varios",
+    "Ajuste": "TD por retorno de fumble",
+    "Valor": "6"
+  },
+  {
+    "Seccion": "Puntuacion - varios",
+    "Ajuste": "TD por retorno de punt/FG bloqueado",
+    "Valor": "6"
+  },
+  {
+    "Seccion": "Puntuacion - varios",
+    "Ajuste": "Retorno de 2 puntos",
+    "Valor": "2"
+  },
+  {
+    "Seccion": "Puntuacion - varios",
+    "Ajuste": "Safety de 1 punto",
+    "Valor": "1"
+  },
+  {
+    "Seccion": "Puntuacion - defensa",
+    "Ajuste": "Cada captura (sack)",
+    "Valor": "2"
+  },
+  {
+    "Seccion": "Puntuacion - defensa",
+    "Ajuste": "Despeje, PAT o FG bloqueado",
+    "Valor": "1"
+  },
+  {
+    "Seccion": "Puntuacion - defensa",
+    "Ajuste": "Cada intercepcion",
+    "Valor": "2"
+  },
+  {
+    "Seccion": "Puntuacion - defensa",
+    "Ajuste": "Cada fumble recuperado",
+    "Valor": "2"
+  },
+  {
+    "Seccion": "Puntuacion - defensa",
+    "Ajuste": "Cada safety",
+    "Valor": "2"
+  },
+  {
+    "Seccion": "Jugadores y waivers",
+    "Ajuste": "Lista de intocables de ESPN",
+    "Valor": "Se respeta"
+  },
+  {
+    "Seccion": "Jugadores y waivers",
+    "Ajuste": "Universo de jugadores",
+    "Valor": "NFL"
+  },
+  {
+    "Seccion": "Jugadores y waivers",
+    "Ajuste": "Cambios de alineacion",
+    "Valor": "Cada jugador se cierra a la hora de su partido"
+  },
+  {
+    "Seccion": "Jugadores y waivers",
+    "Ajuste": "Sistema de adquisicion",
+    "Valor": "Waivers"
+  },
+  {
+    "Seccion": "Jugadores y waivers",
+    "Ajuste": "Limite de adquisiciones por temporada",
+    "Valor": "Sin limite"
+  },
+  {
+    "Seccion": "Jugadores y waivers",
+    "Ajuste": "Periodo de waiver",
+    "Valor": "1 dia"
+  },
+  {
+    "Seccion": "Jugadores y waivers",
+    "Ajuste": "Orden de waivers",
+    "Valor": "Se reinicia cada semana al inverso de la tabla"
+  },
+  {
+    "Seccion": "Trades y keepers",
+    "Ajuste": "Limite de trades",
+    "Valor": "Sin limite"
+  },
+  {
+    "Seccion": "Trades y keepers",
+    "Ajuste": "Fecha limite de trades",
+    "Valor": "2 de diciembre de 2026, 11:00 AM CST"
+  },
+  {
+    "Seccion": "Trades y keepers",
+    "Ajuste": "Revision de trades",
+    "Valor": "2 dias"
+  },
+  {
+    "Seccion": "Trades y keepers",
+    "Ajuste": "Votos para vetar un trade",
+    "Valor": "4"
+  },
+  {
+    "Seccion": "Trades y keepers",
+    "Ajuste": "Keepers 2026 y 2027",
+    "Valor": "No se usan"
+  },
+  {
+    "Seccion": "Temporada regular",
+    "Ajuste": "Arranque",
+    "Valor": "Semana 1 de la NFL"
+  },
+  {
+    "Seccion": "Temporada regular",
+    "Ajuste": "Semanas por enfrentamiento",
+    "Valor": "1"
+  },
+  {
+    "Seccion": "Temporada regular",
+    "Ajuste": "Enfrentamientos de temporada regular",
+    "Valor": "14"
+  },
+  {
+    "Seccion": "Temporada regular",
+    "Ajuste": "Desempate de enfrentamiento",
+    "Valor": "Sin desempate"
+  },
+  {
+    "Seccion": "Temporada regular",
+    "Ajuste": "Ventaja de local",
+    "Valor": "Ninguna"
+  },
+  {
+    "Seccion": "Temporada regular",
+    "Ajuste": "Victorias o derrotas bonus",
+    "Valor": "No"
+  },
+  {
+    "Seccion": "Playoffs",
+    "Ajuste": "Equipos que clasifican",
+    "Valor": "6 de 10"
+  },
+  {
+    "Seccion": "Playoffs",
+    "Ajuste": "Duracion de cada ronda",
+    "Valor": "1 semana (ronda 1, ronda 2 y final)"
+  },
+  {
+    "Seccion": "Playoffs",
+    "Ajuste": "Desempate de siembra",
+    "Valor": "Puntos a favor"
+  },
+  {
+    "Seccion": "Playoffs",
+    "Ajuste": "Ventaja de local",
+    "Valor": "Ninguna"
+  },
+  {
+    "Seccion": "Playoffs",
+    "Ajuste": "Resiembra del bracket",
+    "Valor": "Apagada"
+  },
+  {
+    "Seccion": "Playoffs",
+    "Ajuste": "Movimientos de equipos eliminados",
+    "Valor": "No se bloquean"
+  },
+  {
+    "Seccion": "Playoffs",
+    "Ajuste": "Escalera de consolacion",
+    "Valor": "Si"
+  }
+];
+const DEMO_TNF    = [
+  {
+    "Semana": "Draft",
+    "Fecha": "2026-08-27",
+    "Anfitrion": "Broncos Polacos",
+    "Nota": "Draft (no es semana de la NFL, es la 1ra reunión). Organiza el draft, esto cuenta como su turno de anfitrión. Los demás turnos siguen el orden del draft (pick 1, 2, 3...) pero se saltan a Broncos Polacos donde le toque, recorriendo uno a uno a los picks que siguen. Como solo quedan 9 equipos para llenar 9 huecos antes de Thanksgiving, el décimo hueco (Semana 10) forzosamente le vuelve a tocar a Broncos Polacos. Partido: (NO HAY JUEGO)."
+  },
+  {
+    "Semana": "1",
+    "Fecha": "2026-09-10",
+    "Anfitrion": "",
+    "Nota": "Semana 1 de la NFL, apertura especial · 1er turno disponible tras saltarse a Broncos Polacos · Partido: 49ers @ Rams (Melbourne, Netflix)"
+  },
+  {
+    "Semana": "2",
+    "Fecha": "2026-09-17",
+    "Anfitrion": "",
+    "Nota": "2do turno disponible · Partido: Lions @ Bills"
+  },
+  {
+    "Semana": "3",
+    "Fecha": "2026-09-24",
+    "Anfitrion": "",
+    "Nota": "3er turno disponible · Partido: Falcons @ Packers"
+  },
+  {
+    "Semana": "4",
+    "Fecha": "2026-10-01",
+    "Anfitrion": "",
+    "Nota": "4to turno disponible · Partido: Steelers @ Browns"
+  },
+  {
+    "Semana": "5",
+    "Fecha": "2026-10-08",
+    "Anfitrion": "",
+    "Nota": "5to turno disponible · Partido: Buccaneers @ Cowboys"
+  },
+  {
+    "Semana": "6",
+    "Fecha": "2026-10-15",
+    "Anfitrion": "",
+    "Nota": "6to turno disponible · Partido: Seahawks @ Broncos"
+  },
+  {
+    "Semana": "7",
+    "Fecha": "2026-10-22",
+    "Anfitrion": "",
+    "Nota": "7mo turno disponible · Partido: Patriots @ Bears"
+  },
+  {
+    "Semana": "8",
+    "Fecha": "2026-10-29",
+    "Anfitrion": "",
+    "Nota": "8vo turno disponible · Partido: Panthers @ Packers"
+  },
+  {
+    "Semana": "9",
+    "Fecha": "2026-11-05",
+    "Anfitrion": "",
+    "Nota": "9no y ultimo turno disponible de los otros equipos · Partido: Jaguars @ Ravens"
+  },
+  {
+    "Semana": "10",
+    "Fecha": "2026-11-12",
+    "Anfitrion": "Broncos Polacos",
+    "Nota": "Ya no quedan mas equipos: le vuelve a tocar a Broncos Polacos, cierra el ciclo de 10 · Partido: Commanders @ Giants"
+  },
+  {
+    "Semana": "11",
+    "Fecha": "2026-11-19",
+    "Anfitrion": "",
+    "Nota": "empieza el nuevo ciclo: el mismo que tuvo el turno de la Semana 1 · Partido: Colts @ Texans"
+  },
+  {
+    "Semana": "12",
+    "Fecha": "2026-11-26",
+    "Anfitrion": "",
+    "Nota": "Thanksgiving: 3 juegos, lo organizan los mismos 3 que tuvieron el turno de las Semanas 2, 3 y 4 · Partido: Bears @ Lions (1:00 PM ET) · Eagles @ Cowboys (4:30 PM ET) · Chiefs @ Bills (8:20 PM ET)"
+  },
+  {
+    "Semana": "13",
+    "Fecha": "2026-12-03",
+    "Anfitrion": "",
+    "Nota": "brinca al 5to subsecuente, el mismo que tuvo el turno de la Semana 5 · Partido: Chiefs @ Rams"
+  },
+  {
+    "Semana": "14",
+    "Fecha": "2026-12-10",
+    "Anfitrion": "",
+    "Nota": "el mismo que tuvo el turno de la Semana 6 · ultima fecha de temporada regular, aqui cierra el TNF · Partido: Vikings @ Patriots"
+  }
+];
+</script>
+
+<header class="top">
+  <div class="wrap">
+    <p class="eyebrow">Temporada <span id="temp"></span> · Liga privada en ESPN · <span id="lid"></span></p>
+    <h1 class="liga-nombre"></h1>
+    <div class="pills">
+      <div class="estado" id="estado"><span class="punto"></span><span id="estado-txt">Cargando</span></div>
+      <div class="estado" id="cuadre" hidden><span class="punto"></span><span id="cuadre-txt"></span></div>
+    </div>
+    <div id="host-band"></div>
+
+    <div class="bote">
+      <div class="bote-cifra"><div class="k">El bote</div><div class="v" id="bote">—</div></div>
+      <div class="premios" id="premios"></div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav"><div class="nav-in" role="tablist">
+  <button role="tab" data-tab="tabla"  aria-selected="true"  aria-controls="tabla">Posiciones</button>
+  <button role="tab" data-tab="semana" aria-selected="false" aria-controls="semana">Semana</button>
+  <button role="tab" data-tab="saldos" aria-selected="false" aria-controls="saldos">Saldos</button>
+  <button role="tab" data-tab="reglas" aria-selected="false" aria-controls="reglas">Reglamento</button>
+  <button role="tab" data-tab="cal"    aria-selected="false" aria-controls="cal">Calendario TNF</button>
+  <button role="tab" data-tab="espn"   aria-selected="false" aria-controls="espn">Reglas de ESPN</button>
+</div></nav>
+
+<main class="wrap">
+  <section id="tabla" role="tabpanel">
+    <div class="sec-cab"><h2>Posiciones</h2><span class="sub">como viene de ESPN</span></div>
+    <p class="sec-nota">Récord, puntos a favor y puntos en contra de la temporada regular.</p>
+    <div id="tabla-cont"></div>
+  </section>
+
+  <section id="semana" role="tabpanel" hidden>
+    <div class="sec-cab"><h2>Próximos jueves</h2><span class="sub">partido, fecha y hora</span></div>
+    <p class="sec-nota">Los siguientes 4-5 jueves con el calendario oficial de ESPN. Se actualiza cada semana.</p>
+    <div id="proximos-cont"></div>
+
+    <div class="sec-cab" style="margin-top:52px"><h2>Resultado semanal</h2><span class="sub">ganador y perdedores</span></div>
+    <p class="sec-nota">El ganador de la semana y los dos que quedaron abajo, en orden.</p>
+    <div id="resultados-cont"></div>
+  </section>
+
+  <section id="saldos" role="tabpanel" hidden>
+    <div class="sec-cab"><h2>La raya</h2><span class="sub">quién debe y quién trae a favor</span></div>
+    <p class="sec-nota">A la izquierda de la línea, lo que se debe. A la derecha, lo que se trae a favor.</p>
+    <div class="raya" id="raya-lista"></div>
+    <div class="raya-pies" id="raya-pies"></div>
+
+    <div class="sec-cab" style="margin-top:52px"><h2>Movimientos</h2><span class="sub">lo más reciente primero</span></div>
+    <p class="sec-nota">Cada cobro, castigo y premio que ha entrado a la cuenta.</p>
+    <div id="movs-cont"></div>
+  </section>
+
+  <section id="reglas" role="tabpanel" hidden>
+    <div class="sec-cab"><h2>El reglamento</h2><span class="sub">dinero de la liga</span></div>
+    <p class="sec-nota">Los castigos y premios no se pagan semana a semana: se van abonando o restando al saldo de cada jugador, y se liquida todo junto al final de la temporada. Las multas de asistencia son distintas: no entran al bote de premios, forman un fondo aparte.</p>
+    <div id="voto-cont"></div>
+    <div class="reglas" id="reglas-cont"></div>
+  </section>
+
+  <section id="cal" role="tabpanel" hidden>
+    <div class="sec-cab"><h2>Calendario TNF</h2><span class="sub">quién pone la cena cada jueves</span></div>
+    <p class="sec-nota">El orden sale del draft. Thanksgiving lo organizan tres, y el jueves siguiente sigue el que va en la lista. Si no puedes tu fecha, cámbiala con alguien y avísale al comisionado.</p>
+    <div id="cal-cont"></div>
+  </section>
+
+  <section id="espn" role="tabpanel" hidden>
+    <div class="sec-cab"><h2>Reglas de ESPN</h2><span class="sub">configuración de la liga</span></div>
+    <p class="sec-nota">Cómo está armada la liga en la plataforma: roster, puntuación, waivers, draft y playoffs. Se edita en la pestaña de la hoja, no aquí.</p>
+    <div id="espn-cont"></div>
+  </section>
+
+  <footer>
+    <div id="pie-estado"></div>
+    <div>Comisionado: Alejandro · Dudas o correcciones, mándale mensaje.</div>
+  </footer>
+</main>
+
+<script>
+const mxn = n => new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',maximumFractionDigits:0}).format(n);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function pintarProximos(lista){
+  const cont = document.getElementById('proximos-cont');
+  if (!lista.length){
+    cont.innerHTML = `<div class="vacio"><strong>Todavía no hay calendario cargado.</strong>
+      En cuanto suba el calendario oficial de ESPN, aquí aparecen los siguientes 4-5 jueves con partido, fecha y hora.</div>`;
+    return;
+  }
+  cont.innerHTML = lista.map(p => `<div class="mov">
+    <div class="sem">SEM ${esc(p.Semana)}</div>
+    <div class="qq"><div class="n">${esc(p.Partido)}</div><div class="c">${esc(p.Fecha)} · ${esc(p.Hora)}</div></div>
+  </div>`).join('');
+}
+
+function pintarResultados(lista){
+  const cont = document.getElementById('resultados-cont');
+  if (!lista.length){
+    cont.innerHTML = `<div class="vacio"><strong>Todavía no hay resultados capturados.</strong>
+      En cuanto termine la semana y suba la captura de ESPN, aquí aparece el ganador y los dos perdedores.</div>`;
+    return;
+  }
+  cont.innerHTML = lista.map(r => `<div class="mov">
+    <div class="sem">SEM ${esc(r.Semana)}</div>
+    <div class="qq">
+      <div class="n" style="color:var(--gold)">🏆 ${esc(r.Ganador)}</div>
+      <div class="c">Perdedores: ${esc(r.Perdedor1)}${r.Perdedor2 ? ' · ' + esc(r.Perdedor2) : ''}</div>
+    </div>
+  </div>`).join('');
+}
+
+function num(v){
+  if (v === null || v === undefined) return 0;
+  let s = String(v).trim();
+  if (!s) return 0;
+  const neg = /^\(.*\)$/.test(s);
+  s = s.replace(/[()$\s,]/g,'').replace(/[^0-9.\-]/g,'');
+  const n = parseFloat(s);
+  if (isNaN(n)) return 0;
+  return neg ? -Math.abs(n) : n;
+}
+const hay = v => String(v ?? '').trim() !== '';
+
+function parseCSV(text){
+  const rows=[]; let row=[], cur='', q=false;
+  for (let i=0;i<text.length;i++){
+    const ch=text[i];
+    if (q){ if (ch === '"'){ if (text[i+1] === '"'){ cur+='"'; i++; } else q=false; } else cur+=ch; }
+    else if (ch === '"') q=true;
+    else if (ch === ','){ row.push(cur); cur=''; }
+    else if (ch === '\n'){ row.push(cur); cur=''; rows.push(row); row=[]; }
+    else if (ch !== '\r') cur+=ch;
+  }
+  if (cur.length || row.length){ row.push(cur); rows.push(row); }
+  return rows;
+}
+
+function tabular(text, requeridos){
+  const rows = parseCSV(text);
+  let hi = -1;
+  for (let i=0;i<rows.length;i++){
+    const celdas = rows[i].map(c => c.trim());
+    if (requeridos.every(r => celdas.includes(r))){ hi = i; break; }
+  }
+  if (hi === -1) throw new Error('faltan encabezados ' + requeridos.join('/'));
+  const heads = rows[hi].map(c => c.trim());
+  return rows.slice(hi+1).map(r => {
+    const o = {};
+    heads.forEach((h,i) => { if (h) o[h] = (r[i] ?? '').trim(); });
+    return o;
+  });
+}
+
+async function traer(url, requeridos){
+  const res = await fetch(url, {cache:'no-store'});
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  return tabular(await res.text(), requeridos);
+}
+
+/* ---------- cálculos a partir de los parámetros ---------- */
+function leer(params){
+  const de = tipo => params.filter(p => (p.Tipo||'').trim() === tipo);
+  const uno = tipo => de(tipo)[0];
+
+  const equipos     = num((uno('equipos')     || {}).Vigente);
+  const inscripcion = num((uno('inscripcion') || {}).Vigente);
+  const premios     = de('premio').map(p => [p.Concepto, num(p.Vigente)]);
+  const castigos    = de('castigo').map(p => num(p.Vigente));
+  const semanales   = de('semanal').map(p => num(p.Vigente));
+
+  const multas    = de('multa').map(p => num(p.Vigente));
+  const bote      = equipos * Math.abs(inscripcion) + castigos.reduce((a,c) => a + Math.abs(c), 0);
+  const repartido = premios.reduce((a,p) => a + p[1], 0);
+  const entra     = semanales.filter(s => s < 0).reduce((a,s) => a + Math.abs(s), 0);
+  const sale      = semanales.filter(s => s > 0).reduce((a,s) => a + s, 0);
+
+  return { equipos, inscripcion, premios, bote, repartido, multas,
+           difBote: bote - repartido, difSemana: entra - sale };
+}
+
+function pintarBote(r){
+  document.getElementById('bote').textContent = mxn(r.bote);
+  document.getElementById('premios').innerHTML = r.premios.map(([t,m]) =>
+    `<div class="premio"><span class="n">${esc(t.split(' - ')[0])}</span><span class="m">${mxn(m)}</span></div>`
+  ).join('');
+
+  const chip = document.getElementById('cuadre');
+  const txt  = document.getElementById('cuadre-txt');
+  if (r.difBote === 0 && r.difSemana === 0){
+    chip.hidden = false; chip.classList.remove('mal');
+    txt.textContent = 'Cuentas cuadradas';
+  } else {
+    chip.hidden = false; chip.classList.add('mal');
+    txt.textContent = r.difBote !== 0
+      ? 'Descuadre de ' + mxn(Math.abs(r.difBote)) + ' entre bote y premios'
+      : 'Los semanales no dan suma cero';
+  }
+}
+
+function pintarReglas(params){
+  const orden = [];
+  params.forEach(p => { if (hay(p.Bloque) && !orden.includes(p.Bloque)) orden.push(p.Bloque); });
+
+  document.getElementById('reglas-cont').innerHTML = orden.map(b => {
+    const filas = params.filter(p => p.Bloque === b && hay(p.Concepto)).map(p => {
+      const tipo = (p.Tipo || '').trim();
+      if (tipo === 'texto' || !hay(p.Vigente))
+        return `<div class="regla"><span class="t">${esc(p.Concepto)}</span><span class="m libre">${esc(p.Nota || '—')}</span></div>`;
+      const v = num(p.Vigente);
+      const txt = tipo === 'equipos' ? v : mxn(v);
+      const cls = tipo === 'equipos' ? '' : (v < 0 ? 'neg' : 'pos');
+      const sub = hay(p.Nota) ? `<div class="libre" style="font-size:12px; color:var(--musgo); margin-top:3px">${esc(p.Nota)}</div>` : '';
+      return `<div class="regla" style="flex-direction:column; align-items:stretch">
+        <div style="display:flex; justify-content:space-between; gap:14px">
+          <span class="t">${esc(p.Concepto)}</span><span class="m ${cls}">${esc(txt)}</span>
+        </div>${sub}</div>`;
+    }).join('');
+    return `<div class="bloque"><h3>${esc(b)}</h3>${filas}</div>`;
+  }).join('');
+}
+
+function pintarVotacion(params){
+  const cambios = params.filter(p => {
+    if (!hay(p.Propuesta) || !hay(p.Concepto)) return false;
+    return (p.Tipo || '').trim() === 'texto'
+      ? String(p.Propuesta).trim() !== String(p.Nota || '').trim()
+      : num(p.Propuesta) !== num(p.Vigente);
+  });
+
+  const cont = document.getElementById('voto-cont');
+  if (!cambios.length){ cont.innerHTML = ''; return; }
+
+  const simulados = params.map(p => {
+    const c = cambios.includes(p);
+    return c ? Object.assign({}, p, {Vigente: p.Propuesta}) : p;
+  });
+  const r = leer(simulados);
+  const ok = r.difBote === 0 && r.difSemana === 0;
+
+  const val = (p, campo) => (p.Tipo || '').trim() === 'texto'
+    ? esc(campo === 'v' ? (p.Nota || '—') : p.Propuesta)
+    : ((p.Tipo || '').trim() === 'equipos'
+        ? num(campo === 'v' ? p.Vigente : p.Propuesta)
+        : mxn(num(campo === 'v' ? p.Vigente : p.Propuesta)));
+
+  cont.innerHTML = `<div class="voto">
+    <h3>En votación</h3>
+    <p class="intro">Cambios propuestos antes de que arranque la temporada. Todavía no están vigentes.</p>
+    ${cambios.map(p => {
+      const esNueva = (p.Tipo || '').trim() === 'texto' && !hay(p.Nota);
+      return esNueva
+        ? `<div class="cambio">
+      <span>${esc(p.Concepto)}</span>
+      <span class="de"></span>
+      <span class="fl">nueva regla</span>
+      <span class="a">${val(p,'p')}</span>
+    </div>`
+        : `<div class="cambio">
+      <span>${esc(p.Concepto)}</span>
+      <span class="de">${val(p,'v')}</span>
+      <span class="fl">→</span>
+      <span class="a">${val(p,'p')}</span>
+    </div>`;
+    }).join('')}
+    <div class="cierre ${ok ? 'ok' : 'mal'}">${ok
+      ? 'Con estos cambios el bote quedaría en ' + mxn(r.bote) + ' y las cuentas siguen cuadrando.'
+      : (r.difBote !== 0
+          ? 'Ojo: así quedaría un descuadre de ' + mxn(Math.abs(r.difBote)) + ' entre el bote y los premios.'
+          : 'Ojo: así los movimientos semanales dejarían de dar suma cero.')}</div>
+  </div>`;
+}
+
+const MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+const DIAS  = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+
+function fecha(txt){
+  const m = String(txt || '').trim().match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!m) return null;
+  return new Date(+m[1], +m[2]-1, +m[3]);
+}
+const largo = d => `${DIAS[d.getDay()]} ${d.getDate()} de ${MESES[d.getMonth()]}`;
+const corto = d => `${String(d.getDate()).padStart(2,'0')} ${MESES[d.getMonth()].slice(0,3)}`;
+
+function pintarDraft(){
+  const band = document.getElementById('host-band');
+  if (!band || !CONFIG.draft) return false;
+  const m = String(CONFIG.draft).match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
+  if (!m) return false;
+  const d = new Date(+m[1], +m[2]-1, +m[3], +m[4], +m[5]);
+  const ahora = new Date();
+  if (d < ahora) return false;
+
+  const hoy = new Date(); hoy.setHours(0,0,0,0);
+  const soloDia = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  const dias = Math.round((soloDia - hoy) / 86400000);
+  const hora = d.toLocaleTimeString('es-MX', {hour:'numeric', minute:'2-digit'});
+
+  band.innerHTML = `
+    <div>
+      <div class="k">El draft</div>
+      <div class="quien">${largo(d)}</div>
+      <div class="cuando">a las ${hora} · el orden se sortea una hora antes</div>
+    </div>
+    <div class="faltan">
+      <div class="n">${dias === 0 ? '¡HOY!' : dias}</div>
+      <div class="u">${dias === 0 ? 'es el draft' : dias === 1 ? 'día' : 'días'}</div>
+    </div>`;
+  return true;
+}
+
+function pintarHost(tnf){
+  const band = document.getElementById('host-band');
+  if (!band) return;
+  if (pintarDraft()) return;
+  if (!tnf.length && !CONFIG.draft){
+    band.innerHTML = `<div><div class="k">El draft</div>
+      <div class="quien">Sin fecha</div>
+      <div class="cuando">Todavía no se programa en ESPN.</div></div>`;
+    return;
+  }
+  const filas = tnf.map(t => ({...t, d: fecha(t.Fecha)})).filter(t => t.d);
+  if (!filas.length){ band.innerHTML = ''; return; }
+
+  const hoy = new Date(); hoy.setHours(0,0,0,0);
+  const prox = filas.find(t => t.d >= hoy);
+  if (!prox){
+    band.innerHTML = `<div><div class="k">Anfitriones</div>
+      <div class="cuando">Ya se jugaron todos los jueves de la temporada.</div></div>`;
+    return;
+  }
+  const dias = Math.round((prox.d - hoy) / 86400000);
+  const quien = hay(prox.Anfitrion) ? prox.Anfitrion : 'Se define con el draft';
+  band.innerHTML = `
+    <div>
+      <div class="k">Próximo host${hay(prox.Semana) ? ' · semana ' + esc(prox.Semana) : ''}</div>
+      <div class="quien">${esc(quien)}</div>
+      <div class="cuando">${largo(prox.d)}${hay(prox.Nota) ? ' · ' + esc(prox.Nota) : ''}</div>
+    </div>
+    <div class="faltan">
+      <div class="n">${dias === 0 ? '¡HOY!' : dias}</div>
+      <div class="u">${dias === 0 ? 'es el evento' : dias === 1 ? 'día' : 'días'}</div>
+    </div>`;
+}
+
+function pintarCalendario(tnf){
+  const cont = document.getElementById('cal-cont');
+  if (!cont) return;
+  const filas = tnf.map(t => ({...t, d: fecha(t.Fecha)})).filter(t => t.d);
+  if (!filas.length){
+    cont.innerHTML = `<div class="vacio"><strong>Sin calendario.</strong> Se captura en la hoja del comisionado.</div>`;
+    return;
+  }
+  const hoy = new Date(); hoy.setHours(0,0,0,0);
+  const prox = filas.find(t => t.d >= hoy);
+  cont.innerHTML = `<div class="cal">` + filas.map(t => {
+    const pasado = t.d < hoy, es = prox && t === prox;
+    return `<div class="cal-row ${pasado ? 'pasado' : ''} ${es ? 'proximo' : ''}">
+      <div class="sem">${t.Semana === 'Draft' ? 'DRAFT' : 'S' + esc(t.Semana)}</div>
+      <div class="fec">${corto(t.d)}</div>
+      <div>
+        <div class="anf">${hay(t.Anfitrion) ? esc(t.Anfitrion) : 'Por definir'}</div>
+        ${hay(t.Nota) ? `<div class="nota">${esc(t.Nota)}</div>` : ''}
+      </div>
+      <div>${es ? '<span class="tag">Sigue</span>' : ''}</div>
+    </div>`;
+  }).join('') + `</div>`;
+}
+
+function pintarEspn(ajustes){
+  const cont = document.getElementById('espn-cont');
+  const filas = ajustes.filter(a => hay(a.Ajuste));
+  if (!filas.length){
+    cont.innerHTML = `<div class="vacio"><strong>Falta capturar la configuración.</strong>
+      Se llena en la pestaña de ESPN de la hoja del comisionado.</div>`;
+    return;
+  }
+  const orden = [];
+  filas.forEach(a => { if (hay(a.Seccion) && !orden.includes(a.Seccion)) orden.push(a.Seccion); });
+  cont.innerHTML = `<div class="espn">` + orden.map(sec => {
+    const items = filas.filter(a => a.Seccion === sec).map(a => {
+      const v = hay(a.Valor) ? esc(a.Valor) : 'por capturar';
+      const cls = hay(a.Valor) ? '' : 'falta';
+      return `<div class="ajuste"><span class="k">${esc(a.Ajuste)}</span><span class="v ${cls}">${v}</span></div>`;
+    }).join('');
+    return `<div class="bloque"><h3>${esc(sec)}</h3>${items}</div>`;
+  }).join('') + `</div>`;
+}
+
+function pintarRaya(tabla, saldos){
+  const porManager = new Map();
+  tabla.forEach(t => { if (t.Manager) porManager.set(t.Manager, {nombre:t.Manager, equipo:t.Equipo, saldo:0}); });
+  saldos.forEach(s => {
+    if (!s.Manager) return;
+    if (!porManager.has(s.Manager)) porManager.set(s.Manager, {nombre:s.Manager, equipo:'', saldo:0});
+    porManager.get(s.Manager).saldo += num(s.Monto);
+  });
+
+  const lista = [...porManager.values()].sort((a,b) => a.saldo - b.saldo);
+  if (!lista.length){
+    document.getElementById('raya-lista').innerHTML =
+      `<div class="vacio" style="margin-top:22px"><strong>Falta capturar los equipos.</strong>
+       En cuanto estén los managers y sus inscripciones, aquí sale la cuenta de cada quien.</div>`;
+    document.getElementById('raya-pies').innerHTML = '';
+    return;
+  }
+  const tope = Math.max(1, ...lista.map(p => Math.abs(p.saldo)));
+
+  document.getElementById('raya-lista').innerHTML = lista.map(p => {
+    const pct = Math.abs(p.saldo) / tope * 100;
+    const debe = p.saldo < 0, favor = p.saldo > 0;
+    return `<div class="raya-row">
+      <div class="raya-quien"><div class="nom">${esc(p.nombre)}</div><div class="eq">${esc(p.equipo || '—')}</div></div>
+      <div class="raya-track">
+        <div class="raya-half izq"><span class="barra" data-w="${debe ? pct : 0}"></span></div>
+        <div class="raya-half der"><span class="barra" data-w="${favor ? pct : 0}"></span></div>
+      </div>
+      <div class="raya-monto ${debe ? 'debe' : favor ? 'favor' : 'cero'}">${mxn(p.saldo)}</div>
+    </div>`;
+  }).join('');
+
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.barra').forEach((b,i) => {
+      const w = b.dataset.w + '%';
+      setTimeout(() => { b.style.width = w; }, i * 35);
+    });
+  });
+
+  const porCobrar = lista.filter(p => p.saldo < 0).reduce((a,p) => a + p.saldo, 0);
+  const aFavor    = lista.filter(p => p.saldo > 0).reduce((a,p) => a + p.saldo, 0);
+  const fondo = saldos
+    .filter(s => /^multa/i.test(String(s.Concepto || '').trim()))
+    .reduce((a,s) => a + Math.abs(num(s.Monto)), 0);
+
+  document.getElementById('raya-pies').innerHTML = `
+    <div class="pie"><div class="k">Por cobrar</div><div class="v rojo">${mxn(Math.abs(porCobrar))}</div></div>
+    <div class="pie"><div class="k">Por pagar</div><div class="v">${mxn(aFavor)}</div></div>
+    ${fondo ? `<div class="pie"><div class="k">Fondo de multas</div><div class="v">${mxn(fondo)}</div></div>` : ''}
+    <div class="pie"><div class="k">Participantes</div><div class="v">${lista.length}</div></div>`;
+}
+
+function tablaHTML(tabla, conRecord){
+  const filas = tabla.map(t => {
+    const g = num(t.G), p = num(t.P), e = num(t.E);
+    const j = g + p + e;
+    const pct = j ? ((g + e/2) / j) : 0;
+    const on = CONFIG.resaltar && t.Manager === CONFIG.resaltar;
+    return `<tr class="${on ? 'destacado' : ''}">
+      <td class="pos">${esc(t.Pos)}</td>
+      <td class="izq"><div class="equipo">${esc(t.Equipo)}</div><div class="mgr">${esc(t.Manager || '—')}</div></td>
+      ${conRecord ? `<td>${g}-${p}${e ? '-' + e : ''}</td><td>${pct.toFixed(3).replace(/^0/,'')}</td>
+        <td>${num(t.PF) ? num(t.PF).toFixed(1) : '—'}</td><td>${num(t.PC) ? num(t.PC).toFixed(1) : '—'}</td>` : ''}
+    </tr>`;
+  }).join('');
+  return `<table><thead><tr><th class="izq">#</th><th class="izq">Equipo</th>
+    ${conRecord ? '<th>G-P-E</th><th>%</th><th>PF</th><th>PC</th>' : ''}</tr></thead>
+    <tbody>${filas}</tbody></table>`;
+}
+
+function pintarTabla(tabla){
+  const cont = document.getElementById('tabla-cont');
+  if (!tabla.length){
+    cont.innerHTML = `<div class="vacio"><strong>Todavía no hay equipos.</strong>
+      Captura la lista en la hoja del comisionado y aparecen aquí.</div>`;
+    return;
+  }
+  const jugados = tabla.some(t => num(t.G) + num(t.P) + num(t.E) > 0);
+  cont.innerHTML = jugados
+    ? `<div class="tabla-scroll">${tablaHTML(tabla,true)}</div>`
+    : `<div class="vacio"><strong>Todavía no hay juegos.</strong>
+       Aquí va a salir el récord de cada quien en cuanto se capture la primera semana.</div>
+       <div class="tabla-scroll" style="margin-top:22px">${tablaHTML(tabla,false)}</div>`;
+}
+
+function pintarMovs(saldos){
+  const cont = document.getElementById('movs-cont');
+  if (!saldos.length){ cont.innerHTML = `<div class="vacio"><strong>Sin movimientos.</strong> Todavía no se registra ningún cobro.</div>`; return; }
+  const ord = [...saldos].sort((a,b) => num(b.Semana) - num(a.Semana));
+  cont.innerHTML = `<div class="movs">` + ord.slice(0,40).map(s => {
+    const m = num(s.Monto);
+    return `<div class="mov">
+      <div class="sem">${num(s.Semana) === 0 ? 'INICIO' : 'SEM ' + esc(s.Semana)}</div>
+      <div class="qq"><div class="n">${esc(s.Manager)}</div><div class="c">${esc(s.Concepto)}</div></div>
+      <div class="mm ${m < 0 ? 'debe' : 'favor'}">${mxn(m)}</div></div>`;
+  }).join('') + `</div>`;
+}
+
+function estado(txt, vivo){
+  const el = document.getElementById('estado');
+  el.classList.toggle('vivo', !!vivo);
+  document.getElementById('estado-txt').textContent = txt;
+}
+
+(async function(){
+ try{
+  document.getElementById('temp').textContent = CONFIG.temporada;
+  document.getElementById('lid').textContent  = CONFIG.leagueId ? 'ID ' + CONFIG.leagueId : 'ID pendiente';
+  document.querySelector('.liga-nombre').innerHTML =
+    CONFIG.liga.split(' ').map((w,i) => i === 0 ? esc(w) : `<em>${esc(w)}</em>`).join('');
+
+  let params = DEMO_PARAMS, tabla = DEMO_TABLA, saldos = [], espn = DEMO_ESPN, tnf = DEMO_TNF, conectado = false, aviso = '';
+
+  if (CONFIG.csvParametros && CONFIG.csvTabla && CONFIG.csvSaldos){
+    try{
+      const pide = [
+        traer(CONFIG.csvParametros, ['Bloque','Concepto','Vigente','Tipo']),
+        traer(CONFIG.csvTabla,      ['Pos','Equipo','Manager']),
+        traer(CONFIG.csvSaldos,     ['Semana','Manager','Concepto','Monto'])
+      ];
+      if (CONFIG.csvEspn) pide.push(traer(CONFIG.csvEspn, ['Seccion','Ajuste','Valor']));
+      if (CONFIG.csvTnf)  pide.push(traer(CONFIG.csvTnf,  ['Semana','Fecha','Anfitrion']));
+      const res = await Promise.all(pide);
+      params = res[0]; tabla = res[1]; saldos = res[2];
+      let i = 3;
+      if (CONFIG.csvEspn) espn = res[i++];
+      if (CONFIG.csvTnf)  tnf  = res[i++];
+      params = params.filter(p => hay(p.Concepto) || hay(p.Bloque));
+      tabla  = tabla.filter(t => hay(t.Equipo));
+      saldos = saldos.filter(s => hay(s.Manager) && hay(s.Monto));
+      conectado = true;
+    }catch(err){
+      aviso = 'No se pudo leer la hoja (' + err.message + '). Mostrando la copia de respaldo.';
+      params = DEMO_PARAMS; tabla = DEMO_TABLA; saldos = []; espn = DEMO_ESPN; tnf = DEMO_TNF;
+    }
+  }
+
+  if (!saldos.length){
+    const ins = leer(params).inscripcion;
+    saldos = tabla.filter(t => t.Manager).map(t => ({Semana:0, Manager:t.Manager, Concepto:'Inscripción', Monto:ins}));
+  }
+
+  const r = leer(params);
+  pintarBote(r);
+  pintarReglas(params);
+  pintarVotacion(params);
+  pintarRaya(tabla, saldos);
+  pintarTabla(tabla);
+  pintarProximos(DEMO_PROXIMOS);
+  pintarResultados(DEMO_RESULTADOS);
+  pintarMovs(saldos);
+  pintarEspn(espn);
+  pintarHost(tnf);
+  pintarCalendario(tnf);
+
+  const hora = new Date().toLocaleString('es-MX',{dateStyle:'medium',timeStyle:'short'});
+  if (conectado){
+    estado('Al día · ' + hora, true);
+    document.getElementById('pie-estado').textContent = 'Datos leídos de la hoja del comisionado · ' + hora;
+  } else {
+    estado(aviso ? 'Sin conexión a la hoja' : 'Copia de respaldo', false);
+    document.getElementById('pie-estado').textContent =
+      aviso || 'Copia de respaldo. Falta pegar las URLs de la hoja publicada en el bloque CONFIG.';
+  }
+ }catch(e){
+  estado('Error al cargar', false);
+  document.getElementById('pie-estado').textContent = 'Detalle tecnico: ' + (e && e.message ? e.message : e);
+  const t = document.getElementById('tabla-cont');
+  if (t) t.innerHTML = '<div class="vacio"><strong>Algo fallo al armar la pagina.</strong>' +
+    'Mandale este mensaje al comisionado: ' + String(e && e.message ? e.message : e) + '</div>';
+ }
+})();
+
+const tabs = [...document.querySelectorAll('.nav button[role="tab"]')];
+function abrir(id){
+  tabs.forEach(b => b.setAttribute('aria-selected', String(b.dataset.tab === id)));
+  document.querySelectorAll('main section[role="tabpanel"]').forEach(s => { s.hidden = (s.id !== id); });
+  try{
+    if (location.hash.slice(1) !== id) history.replaceState(null, '', '#' + id);
+  }catch(e){ /* file:// no permite tocar el historial; las pestanas siguen funcionando */ }
+}
+tabs.forEach(b => b.addEventListener('click', () => abrir(b.dataset.tab)));
+tabs.forEach((b,i) => b.addEventListener('keydown', e => {
+  const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+  if (!d) return;
+  e.preventDefault();
+  const n = tabs[(i + d + tabs.length) % tabs.length];
+  n.focus(); abrir(n.dataset.tab);
+}));
+const inicial = location.hash.slice(1);
+if (tabs.some(b => b.dataset.tab === inicial)) abrir(inicial);
+</script>
+</body>
+</html>
