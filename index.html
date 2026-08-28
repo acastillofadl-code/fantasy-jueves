@@ -93,6 +93,27 @@ a{color:var(--gold)}
   white-space:nowrap; border-bottom:2px solid transparent}
 .nav button:hover{color:var(--bone)}
 .nav button[aria-selected="true"]{color:var(--gold); border-bottom-color:var(--gold)}
+
+.subtabs{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px}
+.subtab{font-family:var(--mono); font-size:13px; color:var(--musgo); background:transparent;
+  border:1px solid var(--line); border-radius:99px; padding:6px 14px; cursor:pointer}
+.subtab:hover{border-color:var(--acc-line); color:var(--bone)}
+.subtab.activo{background:var(--gold); border-color:var(--gold); color:var(--ink); font-weight:700}
+
+.marcador{border:1px solid var(--line); border-radius:4px; padding:12px 16px; margin-bottom:10px; background:var(--felt)}
+.mrow{display:flex; justify-content:space-between; align-items:center; padding:6px 0}
+.mrow .eq{font-weight:600; font-size:15px}
+.mrow .pts{font-family:var(--mono); font-weight:700; font-size:16px; color:var(--musgo)}
+.mrow.destacado .eq{color:var(--gold)}
+.mrow.destacado .pts{color:var(--gold)}
+
+.res-semana{margin-top:18px; border:1px solid var(--acc-line); border-radius:4px;
+  background:linear-gradient(180deg,var(--acc-glow),transparent); padding:16px 20px;
+  display:flex; flex-wrap:wrap; gap:22px}
+.res-semana .item .k{font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--musgo)}
+.res-semana .item .v{font-family:var(--display); font-weight:800; font-size:22px; line-height:1.2}
+.res-semana .item.ganador .v{color:var(--gold)}
+.res-semana .item.penultimo .v, .res-semana .item.ultimo .v{color:var(--rojo)}
 section[hidden]{display:none}
 
 .espn{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px}
@@ -492,9 +513,21 @@ const DEMO_TABLA  = [
   }
 ];
 // Proximos jueves: partido, fecha y hora. Se llena con el calendario de ESPN, se va actualizando semana a semana.
-const DEMO_PROXIMOS = [];
-// Resultado de la semana: ganador y los dos perdedores, en orden. Se llena con la captura de ESPN de cada semana.
-const DEMO_RESULTADOS = [];
+const DEMO_PROXIMOS = [{"Semana": "1", "Fecha": "2026-09-10", "Local": "Ayahuascas boys", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "1", "Fecha": "2026-09-10", "Local": "La mazaneta", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "1", "Fecha": "2026-09-10", "Local": "Niner Gang", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "1", "Fecha": "2026-09-10", "Local": "Morett", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "1", "Fecha": "2026-09-10", "Local": "Seba IR", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "2", "Fecha": "2026-09-17", "Local": "Monsters of the Midway", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "2", "Fecha": "2026-09-17", "Local": "Ayahuascas boys", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "2", "Fecha": "2026-09-17", "Local": "AGUS", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "2", "Fecha": "2026-09-17", "Local": "Mighty Eagles", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "2", "Fecha": "2026-09-17", "Local": "Broncos Polacos", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "3", "Fecha": "2026-09-24", "Local": "Kekas 25", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "3", "Fecha": "2026-09-24", "Local": "La mazaneta", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "3", "Fecha": "2026-09-24", "Local": "Morett", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "3", "Fecha": "2026-09-24", "Local": "Seba IR", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "3", "Fecha": "2026-09-24", "Local": "Broncos Polacos", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "4", "Fecha": "2026-10-01", "Local": "Monsters of the Midway", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "4", "Fecha": "2026-10-01", "Local": "Morett", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "4", "Fecha": "2026-10-01", "Local": "Niner Gang", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "4", "Fecha": "2026-10-01", "Local": "Ayahuascas boys", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "4", "Fecha": "2026-10-01", "Local": "AGUS", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "5", "Fecha": "2026-10-08", "Local": "Monsters of the Midway", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "5", "Fecha": "2026-10-08", "Local": "La mazaneta", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "5", "Fecha": "2026-10-08", "Local": "Kekas 25", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "5", "Fecha": "2026-10-08", "Local": "Broncos Polacos", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "5", "Fecha": "2026-10-08", "Local": "Mighty Eagles", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "6", "Fecha": "2026-10-15", "Local": "Niner Gang", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "6", "Fecha": "2026-10-15", "Local": "Kekas 25", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "6", "Fecha": "2026-10-15", "Local": "Seba IR", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "6", "Fecha": "2026-10-15", "Local": "Morett", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "6", "Fecha": "2026-10-15", "Local": "Ayahuascas boys", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "7", "Fecha": "2026-10-22", "Local": "Monsters of the Midway", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "7", "Fecha": "2026-10-22", "Local": "La mazaneta", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "7", "Fecha": "2026-10-22", "Local": "Mighty Eagles", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "7", "Fecha": "2026-10-22", "Local": "AGUS", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "7", "Fecha": "2026-10-22", "Local": "Ayahuascas boys", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "8", "Fecha": "2026-10-29", "Local": "Broncos Polacos", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "8", "Fecha": "2026-10-29", "Local": "Mighty Eagles", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "8", "Fecha": "2026-10-29", "Local": "Kekas 25", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "8", "Fecha": "2026-10-29", "Local": "Seba IR", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "8", "Fecha": "2026-10-29", "Local": "Morett", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "9", "Fecha": "2026-11-05", "Local": "La mazaneta", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "9", "Fecha": "2026-11-05", "Local": "AGUS", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "9", "Fecha": "2026-11-05", "Local": "Ayahuascas boys", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "9", "Fecha": "2026-11-05", "Local": "Niner Gang", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "9", "Fecha": "2026-11-05", "Local": "Morett", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "10", "Fecha": "2026-11-12", "Local": "Monsters of the Midway", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "10", "Fecha": "2026-11-12", "Local": "AGUS", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "10", "Fecha": "2026-11-12", "Local": "Mighty Eagles", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "10", "Fecha": "2026-11-12", "Local": "Broncos Polacos", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "10", "Fecha": "2026-11-12", "Local": "Kekas 25", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "11", "Fecha": "2026-11-19", "Local": "Morett", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "11", "Fecha": "2026-11-19", "Local": "La mazaneta", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "11", "Fecha": "2026-11-19", "Local": "Niner Gang", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "11", "Fecha": "2026-11-19", "Local": "Seba IR", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "11", "Fecha": "2026-11-19", "Local": "Kekas 25", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "12", "Fecha": "2026-11-26", "Local": "Monsters of the Midway", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "12", "Fecha": "2026-11-26", "Local": "Niner Gang", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "12", "Fecha": "2026-11-26", "Local": "Ayahuascas boys", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "12", "Fecha": "2026-11-26", "Local": "AGUS", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "12", "Fecha": "2026-11-26", "Local": "Mighty Eagles", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "13", "Fecha": "2026-12-03", "Local": "Mighty Eagles", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "13", "Fecha": "2026-12-03", "Local": "La mazaneta", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "13", "Fecha": "2026-12-03", "Local": "Seba IR", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "13", "Fecha": "2026-12-03", "Local": "Kekas 25", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "13", "Fecha": "2026-12-03", "Local": "Broncos Polacos", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "14", "Fecha": "2026-12-10", "Local": "AGUS", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "14", "Fecha": "2026-12-10", "Local": "Seba IR", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "14", "Fecha": "2026-12-10", "Local": "Morett", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "14", "Fecha": "2026-12-10", "Local": "Niner Gang", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "14", "Fecha": "2026-12-10", "Local": "Ayahuascas boys", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}];
+const DEMO_DRAFT  = [
+  { "Pos": 1,  "Equipo": "Mighty Eagles",           "Jugador": "Jahmyr Gibbs (RB, DET)" },
+  { "Pos": 2,  "Equipo": "Niner Gang",               "Jugador": "Bijan Robinson (RB, ATL)" },
+  { "Pos": 3,  "Equipo": "Broncos Polacos",          "Jugador": "Ja'Marr Chase (WR, CIN)" },
+  { "Pos": 4,  "Equipo": "AGUS",                     "Jugador": "Jaxon Smith-Njigba (WR, SEA)" },
+  { "Pos": 5,  "Equipo": "Seba IR",                  "Jugador": "Amon-Ra St. Brown (WR, DET)" },
+  { "Pos": 6,  "Equipo": "Monsters of the Midway",   "Jugador": "Jonathan Taylor (RB, IND)" },
+  { "Pos": 7,  "Equipo": "La mazaneta",              "Jugador": "Christian McCaffrey (RB, SF)" },
+  { "Pos": 8,  "Equipo": "Ayahuascas boys",          "Jugador": "Puka Nacua (WR, LAR)" },
+  { "Pos": 9,  "Equipo": "Kekas 25",                 "Jugador": "CeeDee Lamb (WR, DAL)" },
+  { "Pos": 10, "Equipo": "Morett",                   "Jugador": "De'Von Achane (RB, MIA)" }
+];
+// Resultado de la ultima semana ya jugada: ganador, penultimo y ultimo. Se llena en cuanto termine una semana.
+const DEMO_RESULTADO_SEMANA = null;
 const DEMO_ESPN   = [
   {
     "Seccion": "Basicos",
@@ -932,56 +965,56 @@ const DEMO_TNF    = [
   {
     "Semana": "1",
     "Fecha": "2026-09-10",
-    "Anfitrion": "",
-    "Nota": "Semana 1 de la NFL, apertura especial · 1er turno disponible tras saltarse a Broncos Polacos · Partido: 49ers @ Rams (Melbourne, Netflix)"
+    "Anfitrion": "Mighty Eagles",
+    "Nota": "Le toca a Mighty Eagles (pick 1 del draft) · Partido: 49ers @ Rams (Melbourne, Netflix)"
   },
   {
     "Semana": "2",
     "Fecha": "2026-09-17",
-    "Anfitrion": "",
-    "Nota": "2do turno disponible · Partido: Lions @ Bills"
+    "Anfitrion": "Niner Gang",
+    "Nota": "Le toca a Niner Gang (pick 2 del draft) · Partido: Lions @ Bills"
   },
   {
     "Semana": "3",
     "Fecha": "2026-09-24",
-    "Anfitrion": "",
-    "Nota": "3er turno disponible · Partido: Falcons @ Packers"
+    "Anfitrion": "AGUS",
+    "Nota": "Le toca a AGUS (pick 4 del draft) · Partido: Falcons @ Packers"
   },
   {
     "Semana": "4",
     "Fecha": "2026-10-01",
-    "Anfitrion": "",
-    "Nota": "4to turno disponible · Partido: Steelers @ Browns"
+    "Anfitrion": "Seba IR",
+    "Nota": "Le toca a Seba IR (pick 5 del draft) · Partido: Steelers @ Browns"
   },
   {
     "Semana": "5",
     "Fecha": "2026-10-08",
-    "Anfitrion": "",
-    "Nota": "5to turno disponible · Partido: Buccaneers @ Cowboys"
+    "Anfitrion": "Monsters of the Midway",
+    "Nota": "Le toca a Monsters of the Midway (pick 6 del draft) · Partido: Buccaneers @ Cowboys"
   },
   {
     "Semana": "6",
     "Fecha": "2026-10-15",
-    "Anfitrion": "",
-    "Nota": "6to turno disponible · Partido: Seahawks @ Broncos"
+    "Anfitrion": "La mazaneta",
+    "Nota": "Le toca a La mazaneta (pick 7 del draft) · Partido: Seahawks @ Broncos"
   },
   {
     "Semana": "7",
     "Fecha": "2026-10-22",
-    "Anfitrion": "",
-    "Nota": "7mo turno disponible · Partido: Patriots @ Bears"
+    "Anfitrion": "Ayahuascas boys",
+    "Nota": "Le toca a Ayahuascas boys (pick 8 del draft) · Partido: Patriots @ Bears"
   },
   {
     "Semana": "8",
     "Fecha": "2026-10-29",
-    "Anfitrion": "",
-    "Nota": "8vo turno disponible · Partido: Panthers @ Packers"
+    "Anfitrion": "Kekas 25",
+    "Nota": "Le toca a Kekas 25 (pick 9 del draft) · Partido: Panthers @ Packers"
   },
   {
     "Semana": "9",
     "Fecha": "2026-11-05",
-    "Anfitrion": "",
-    "Nota": "9no y ultimo turno disponible de los otros equipos · Partido: Jaguars @ Ravens"
+    "Anfitrion": "Morett",
+    "Nota": "Le toca a Morett (pick 10 del draft) · Partido: Jaguars @ Ravens"
   },
   {
     "Semana": "10",
@@ -992,26 +1025,26 @@ const DEMO_TNF    = [
   {
     "Semana": "11",
     "Fecha": "2026-11-19",
-    "Anfitrion": "",
-    "Nota": "empieza el nuevo ciclo: el mismo que tuvo el turno de la Semana 1 · Partido: Colts @ Texans"
+    "Anfitrion": "Mighty Eagles",
+    "Nota": "empieza el nuevo ciclo: le toca a Mighty Eagles otra vez (mismo turno que la Semana 1) · Partido: Colts @ Texans"
   },
   {
     "Semana": "12",
     "Fecha": "2026-11-26",
-    "Anfitrion": "",
-    "Nota": "Thanksgiving: 3 juegos, lo organizan los mismos 3 que tuvieron el turno de las Semanas 2, 3 y 4 · Partido: Bears @ Lions (1:00 PM ET) · Eagles @ Cowboys (4:30 PM ET) · Chiefs @ Bills (8:20 PM ET)"
+    "Anfitrion": "Niner Gang, AGUS y Seba IR",
+    "Nota": "Thanksgiving: 3 juegos, lo organizan Niner Gang, AGUS y Seba IR (mismos turnos que las Semanas 2, 3 y 4) · Partido: Bears @ Lions (1:00 PM ET) · Eagles @ Cowboys (4:30 PM ET) · Chiefs @ Bills (8:20 PM ET)"
   },
   {
     "Semana": "13",
     "Fecha": "2026-12-03",
-    "Anfitrion": "",
-    "Nota": "brinca al 5to subsecuente, el mismo que tuvo el turno de la Semana 5 · Partido: Chiefs @ Rams"
+    "Anfitrion": "Monsters of the Midway",
+    "Nota": "brinca al 5to subsecuente: le toca a Monsters of the Midway (mismo turno que la Semana 5) · Partido: Chiefs @ Rams"
   },
   {
     "Semana": "14",
     "Fecha": "2026-12-10",
-    "Anfitrion": "",
-    "Nota": "el mismo que tuvo el turno de la Semana 6 · ultima fecha de temporada regular, aqui cierra el TNF · Partido: Vikings @ Patriots"
+    "Anfitrion": "La mazaneta",
+    "Nota": "le toca a La mazaneta (mismo turno que la Semana 6) · ultima fecha de temporada regular, aqui cierra el TNF · Partido: Vikings @ Patriots"
   }
 ];
 </script>
@@ -1024,6 +1057,7 @@ const DEMO_TNF    = [
       <div class="estado" id="estado"><span class="punto"></span><span id="estado-txt">Cargando</span></div>
       <div class="estado" id="cuadre" hidden><span class="punto"></span><span id="cuadre-txt"></span></div>
     </div>
+    <div id="resultado-semana"></div>
     <div id="host-band"></div>
 
     <div class="bote">
@@ -1035,6 +1069,7 @@ const DEMO_TNF    = [
 
 <nav class="nav"><div class="nav-in" role="tablist">
   <button role="tab" data-tab="tabla"  aria-selected="true"  aria-controls="tabla">Posiciones</button>
+  <button role="tab" data-tab="draft"  aria-selected="false" aria-controls="draft">Draft</button>
   <button role="tab" data-tab="semana" aria-selected="false" aria-controls="semana">Semana</button>
   <button role="tab" data-tab="saldos" aria-selected="false" aria-controls="saldos">Saldos</button>
   <button role="tab" data-tab="reglas" aria-selected="false" aria-controls="reglas">Reglamento</button>
@@ -1049,14 +1084,16 @@ const DEMO_TNF    = [
     <div id="tabla-cont"></div>
   </section>
 
-  <section id="semana" role="tabpanel" hidden>
-    <div class="sec-cab"><h2>Próximos jueves</h2><span class="sub">partido, fecha y hora</span></div>
-    <p class="sec-nota">Los siguientes 4-5 jueves con el calendario oficial de ESPN. Se actualiza cada semana.</p>
-    <div id="proximos-cont"></div>
+  <section id="draft" role="tabpanel" hidden>
+    <div class="sec-cab"><h2>Orden del draft</h2><span class="sub">Ronda 1, como viene de ESPN</span></div>
+    <p class="sec-nota">Broncos Polacos organizó el draft, así que su pick no cuenta para el orden de anfitriones del TNF (ver pestaña Calendario TNF).</p>
+    <div id="draft-cont"></div>
+  </section>
 
-    <div class="sec-cab" style="margin-top:52px"><h2>Resultado semanal</h2><span class="sub">ganador y perdedores</span></div>
-    <p class="sec-nota">El ganador de la semana y los dos que quedaron abajo, en orden.</p>
-    <div id="resultados-cont"></div>
+  <section id="semana" role="tabpanel" hidden>
+    <div class="sec-cab"><h2>Próximos jueves</h2><span class="sub">enfrentamientos de la liga por semana</span></div>
+    <p class="sec-nota">Los enfrentamientos de todos, semana por semana. El ganador y los dos últimos de cada semana ya jugada aparecen junto al nombre de la liga, arriba.</p>
+    <div id="proximos-cont"></div>
   </section>
 
   <section id="saldos" role="tabpanel" hidden>
@@ -1099,33 +1136,44 @@ const DEMO_TNF    = [
 const mxn = n => new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',maximumFractionDigits:0}).format(n);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
+let PROXIMOS_DATA = [];
+let PROXIMOS_SEM_ACTIVA = null;
+
 function pintarProximos(lista){
+  PROXIMOS_DATA = lista;
   const cont = document.getElementById('proximos-cont');
   if (!lista.length){
     cont.innerHTML = `<div class="vacio"><strong>Todavía no hay calendario cargado.</strong>
-      En cuanto suba el calendario oficial de ESPN, aquí aparecen los siguientes 4-5 jueves con partido, fecha y hora.</div>`;
+      En cuanto suba el calendario oficial de ESPN, aquí aparecen los partidos de todos, semana por semana.</div>`;
     return;
   }
-  cont.innerHTML = lista.map(p => `<div class="mov">
-    <div class="sem">SEM ${esc(p.Semana)}</div>
-    <div class="qq"><div class="n">${esc(p.Partido)}</div><div class="c">${esc(p.Fecha)} · ${esc(p.Hora)}</div></div>
-  </div>`).join('');
+  const semanas = [...new Set(lista.map(p => p.Semana))]
+    .sort((a,b) => Number(a) - Number(b));
+  if (!PROXIMOS_SEM_ACTIVA || !semanas.includes(PROXIMOS_SEM_ACTIVA)) PROXIMOS_SEM_ACTIVA = semanas[0];
+
+  cont.innerHTML = `
+    <div class="subtabs">${semanas.map(s =>
+      `<button class="subtab${s === PROXIMOS_SEM_ACTIVA ? ' activo' : ''}" onclick="verSemanaPartidos('${s}')">S${esc(s)}</button>`
+    ).join('')}</div>
+    <div id="proximos-lista"></div>`;
+  renderSemanaPartidos();
 }
 
-function pintarResultados(lista){
-  const cont = document.getElementById('resultados-cont');
-  if (!lista.length){
-    cont.innerHTML = `<div class="vacio"><strong>Todavía no hay resultados capturados.</strong>
-      En cuanto termine la semana y suba la captura de ESPN, aquí aparece el ganador y los dos perdedores.</div>`;
-    return;
-  }
-  cont.innerHTML = lista.map(r => `<div class="mov">
-    <div class="sem">SEM ${esc(r.Semana)}</div>
-    <div class="qq">
-      <div class="n" style="color:var(--gold)">🏆 ${esc(r.Ganador)}</div>
-      <div class="c">Perdedores: ${esc(r.Perdedor1)}${r.Perdedor2 ? ' · ' + esc(r.Perdedor2) : ''}</div>
-    </div>
-  </div>`).join('');
+function verSemanaPartidos(semana){
+  PROXIMOS_SEM_ACTIVA = semana;
+  document.querySelectorAll('#proximos-cont .subtab').forEach(b =>
+    b.classList.toggle('activo', b.textContent === 'S' + semana));
+  renderSemanaPartidos();
+}
+
+function renderSemanaPartidos(){
+  const filas = PROXIMOS_DATA.filter(p => p.Semana === PROXIMOS_SEM_ACTIVA);
+  const cont = document.getElementById('proximos-lista');
+  if (!cont) return;
+  cont.innerHTML = filas.map(p => `<div class="marcador">
+      <div class="mrow"><span class="eq">${esc(p.Local)}</span><span class="pts">${hay(p.PtsLocal) ? esc(p.PtsLocal) : '—'}</span></div>
+      <div class="mrow"><span class="eq">${esc(p.Visita)}</span><span class="pts">${hay(p.PtsVisita) ? esc(p.PtsVisita) : '—'}</span></div>
+    </div>`).join('');
 }
 
 function num(v){
@@ -1300,6 +1348,17 @@ function fecha(txt){
 const largo = d => `${DIAS[d.getDay()]} ${d.getDate()} de ${MESES[d.getMonth()]}`;
 const corto = d => `${String(d.getDate()).padStart(2,'0')} ${MESES[d.getMonth()].slice(0,3)}`;
 
+function pintarResultadoSemana(res){
+  const cont = document.getElementById('resultado-semana');
+  if (!cont) return;
+  if (!res){ cont.innerHTML = ''; return; }
+  cont.innerHTML = `<div class="res-semana">
+    <div class="item ganador"><div class="k">Ganador · semana ${esc(res.Semana)}</div><div class="v">${esc(res.Ganador)}</div></div>
+    <div class="item penultimo"><div class="k">Penúltimo</div><div class="v">${esc(res.Penultimo)}</div></div>
+    <div class="item ultimo"><div class="k">Último</div><div class="v">${esc(res.Ultimo)}</div></div>
+  </div>`;
+}
+
 function pintarDraft(){
   const band = document.getElementById('host-band');
   if (!band || !CONFIG.draft) return false;
@@ -1309,9 +1368,6 @@ function pintarDraft(){
   const ahora = new Date();
   if (d < ahora) return false;
 
-  const hoy = new Date(); hoy.setHours(0,0,0,0);
-  const soloDia = new Date(d.getFullYear(), d.getMonth(), d.getDate());
-  const dias = Math.round((soloDia - hoy) / 86400000);
   const hora = d.toLocaleTimeString('es-MX', {hour:'numeric', minute:'2-digit'});
 
   band.innerHTML = `
@@ -1319,10 +1375,6 @@ function pintarDraft(){
       <div class="k">El draft</div>
       <div class="quien">${largo(d)}</div>
       <div class="cuando">a las ${hora} · el orden se sortea una hora antes</div>
-    </div>
-    <div class="faltan">
-      <div class="n">${dias === 0 ? '¡HOY!' : dias}</div>
-      <div class="u">${dias === 0 ? 'es el draft' : dias === 1 ? 'día' : 'días'}</div>
     </div>`;
   return true;
 }
@@ -1347,17 +1399,12 @@ function pintarHost(tnf){
       <div class="cuando">Ya se jugaron todos los jueves de la temporada.</div></div>`;
     return;
   }
-  const dias = Math.round((prox.d - hoy) / 86400000);
   const quien = hay(prox.Anfitrion) ? prox.Anfitrion : 'Se define con el draft';
   band.innerHTML = `
     <div>
       <div class="k">Próximo host${hay(prox.Semana) ? ' · semana ' + esc(prox.Semana) : ''}</div>
       <div class="quien">${esc(quien)}</div>
       <div class="cuando">${largo(prox.d)}${hay(prox.Nota) ? ' · ' + esc(prox.Nota) : ''}</div>
-    </div>
-    <div class="faltan">
-      <div class="n">${dias === 0 ? '¡HOY!' : dias}</div>
-      <div class="u">${dias === 0 ? 'es el evento' : dias === 1 ? 'día' : 'días'}</div>
     </div>`;
 }
 
@@ -1475,6 +1522,25 @@ function tablaHTML(tabla, conRecord){
     <tbody>${filas}</tbody></table>`;
 }
 
+function pintarDraftOrden(draft){
+  const cont = document.getElementById('draft-cont');
+  if (!draft.length){
+    cont.innerHTML = `<div class="vacio"><strong>Todavía no hay orden de draft.</strong>
+      Aparece aquí en cuanto el comisionado suba la captura de ESPN.</div>`;
+    return;
+  }
+  const filas = draft.map(d => {
+    const on = d.Equipo === 'Broncos Polacos';
+    return `<tr class="${on ? 'destacado' : ''}">
+      <td class="pos">${esc(d.Pos)}</td>
+      <td class="izq"><div class="equipo">${esc(d.Equipo)}</div><div class="mgr">${esc(d.Jugador || '—')}</div></td>
+    </tr>`;
+  }).join('');
+  cont.innerHTML = `<div class="tabla-scroll"><table><thead><tr>
+    <th class="izq">#</th><th class="izq">Equipo</th></tr></thead>
+    <tbody>${filas}</tbody></table></div>`;
+}
+
 function pintarTabla(tabla){
   const cont = document.getElementById('tabla-cont');
   if (!tabla.length){
@@ -1553,8 +1619,9 @@ function estado(txt, vivo){
   pintarVotacion(params);
   pintarRaya(tabla, saldos);
   pintarTabla(tabla);
+  pintarDraftOrden(DEMO_DRAFT);
   pintarProximos(DEMO_PROXIMOS);
-  pintarResultados(DEMO_RESULTADOS);
+  pintarResultadoSemana(DEMO_RESULTADO_SEMANA);
   pintarMovs(saldos);
   pintarEspn(espn);
   pintarHost(tnf);
