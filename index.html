@@ -51,7 +51,7 @@ a{color:var(--gold)}
 }
 .host-band .k{font-family:var(--mono); font-size:11px; letter-spacing:.18em;
   text-transform:uppercase; color:var(--gold); margin-bottom:4px}
-.host-band .quien{font-family:var(--display); font-weight:800; line-height:.95;
+.host-band .quien{font-family:var(--display); font-weight:800; line-height:.95; color:var(--gold);
   font-size:clamp(30px,6vw,54px); text-transform:uppercase}
 .host-band .cuando{font-size:14px; color:var(--musgo); margin-top:6px}
 .host-band .faltan{text-align:right; white-space:nowrap}
@@ -67,6 +67,7 @@ a{color:var(--gold)}
 .cal-row .sem{font-family:var(--mono); font-size:11px; color:var(--musgo); letter-spacing:.08em}
 .cal-row .fec{font-family:var(--mono); font-size:14px}
 .cal-row .anf{font-weight:700; font-size:15px}
+.cal-row.proximo .anf{color:var(--gold)}
 .cal-row .nota{font-size:12px; color:var(--musgo)}
 .cal-row .tag{font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase;
   color:var(--gold); border:1px solid var(--acc-line); border-radius:99px; padding:3px 9px}
@@ -413,107 +414,116 @@ const DEMO_PARAMS = [
 const DEMO_TABLA  = [
   {
     "Pos": 1,
-    "Equipo": "Monsters of the Midway",
-    "Manager": "Alejandro Castillo Fadl",
-    "G": "",
-    "P": "",
-    "E": "",
-    "PF": "",
-    "PC": ""
+    "Equipo": "Niner Gang",
+    "Manager": "Carlos Mateos Landeros",
+    "G": 1,
+    "P": 0,
+    "E": 0,
+    "PF": 182.9,
+    "PC": 164.56
   },
   {
     "Pos": 2,
-    "Equipo": "Morett",
-    "Manager": "Por definir - Morett",
-    "G": "",
-    "P": "",
-    "E": "",
-    "PF": "",
-    "PC": ""
+    "Equipo": "Monsters of the Midway",
+    "Manager": "Alejandro Castillo Fadl",
+    "G": 1,
+    "P": 0,
+    "E": 0,
+    "PF": 145.16,
+    "PC": 107.66
   },
   {
     "Pos": 3,
-    "Equipo": "Niner Gang",
-    "Manager": "Carlos Mateos Landeros",
-    "G": "",
-    "P": "",
-    "E": "",
-    "PF": "",
-    "PC": ""
+    "Equipo": "Morett",
+    "Manager": "Por definir - Morett",
+    "G": 1,
+    "P": 0,
+    "E": 0,
+    "PF": 142.6,
+    "PC": 101.16
   },
   {
     "Pos": 4,
-    "Equipo": "Mighty Eagles",
-    "Manager": "Por definir - Mighty Eagles",
-    "G": "",
-    "P": "",
-    "E": "",
-    "PF": "",
-    "PC": ""
+    "Equipo": "La mazaneta",
+    "Manager": "Por definir - La mazaneta",
+    "G": 1,
+    "P": 0,
+    "E": 0,
+    "PF": 127.26,
+    "PC": 118.52
   },
   {
     "Pos": 5,
-    "Equipo": "Kekas 25",
-    "Manager": "Por definir - Kekas 25",
-    "G": "",
-    "P": "",
-    "E": "",
-    "PF": "",
-    "PC": ""
+    "Equipo": "Seba IR",
+    "Manager": "Por definir - Seba IR",
+    "G": 1,
+    "P": 0,
+    "E": 0,
+    "PF": 98.9,
+    "PC": 98.56
   },
   {
     "Pos": 6,
-    "Equipo": "La mazaneta",
-    "Manager": "Por definir - La mazaneta",
-    "G": "",
-    "P": "",
-    "E": "",
-    "PF": "",
-    "PC": ""
+    "Equipo": "Mighty Eagles",
+    "Manager": "Por definir - Mighty Eagles",
+    "G": 0,
+    "P": 1,
+    "E": 0,
+    "PF": 164.56,
+    "PC": 182.9
   },
   {
     "Pos": 7,
-    "Equipo": "Ayahuascas boys",
-    "Manager": "Por definir - Ayahuascas boys",
-    "G": "",
-    "P": "",
-    "E": "",
-    "PF": "",
-    "PC": ""
+    "Equipo": "AGUS",
+    "Manager": "Agustín Farias",
+    "G": 0,
+    "P": 1,
+    "E": 0,
+    "PF": 118.52,
+    "PC": 127.26
   },
   {
     "Pos": 8,
-    "Equipo": "Seba IR",
-    "Manager": "Por definir - Seba IR",
-    "G": "",
-    "P": "",
-    "E": "",
-    "PF": "",
-    "PC": ""
+    "Equipo": "Ayahuascas boys",
+    "Manager": "Por definir - Ayahuascas boys",
+    "G": 0,
+    "P": 1,
+    "E": 0,
+    "PF": 107.66,
+    "PC": 145.16
   },
   {
     "Pos": 9,
-    "Equipo": "AGUS",
-    "Manager": "Agustín Farias",
-    "G": "",
-    "P": "",
-    "E": "",
-    "PF": "",
-    "PC": ""
+    "Equipo": "Broncos Polacos",
+    "Manager": "Por definir - Broncos Polacos",
+    "G": 0,
+    "P": 1,
+    "E": 0,
+    "PF": 101.16,
+    "PC": 142.6
   },
   {
     "Pos": 10,
-    "Equipo": "Broncos Polacos",
-    "Manager": "Por definir - Broncos Polacos",
-    "G": "",
-    "P": "",
-    "E": "",
-    "PF": "",
-    "PC": ""
+    "Equipo": "Kekas 25",
+    "Manager": "Por definir - Kekas 25",
+    "G": 0,
+    "P": 1,
+    "E": 0,
+    "PF": 98.56,
+    "PC": 98.9
   }
 ];
 // Proximos jueves: partido, fecha y hora. Se llena con el calendario de ESPN, se va actualizando semana a semana.
-const DEMO_PROXIMOS = [{"Semana": "1", "Fecha": "2026-09-10", "Local": "Ayahuascas boys", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "1", "Fecha": "2026-09-10", "Local": "La mazaneta", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "1", "Fecha": "2026-09-10", "Local": "Niner Gang", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "1", "Fecha": "2026-09-10", "Local": "Morett", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "1", "Fecha": "2026-09-10", "Local": "Seba IR", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "2", "Fecha": "2026-09-17", "Local": "Monsters of the Midway", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "2", "Fecha": "2026-09-17", "Local": "Ayahuascas boys", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "2", "Fecha": "2026-09-17", "Local": "AGUS", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "2", "Fecha": "2026-09-17", "Local": "Mighty Eagles", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "2", "Fecha": "2026-09-17", "Local": "Broncos Polacos", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "3", "Fecha": "2026-09-24", "Local": "Kekas 25", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "3", "Fecha": "2026-09-24", "Local": "La mazaneta", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "3", "Fecha": "2026-09-24", "Local": "Morett", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "3", "Fecha": "2026-09-24", "Local": "Seba IR", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "3", "Fecha": "2026-09-24", "Local": "Broncos Polacos", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "4", "Fecha": "2026-10-01", "Local": "Monsters of the Midway", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "4", "Fecha": "2026-10-01", "Local": "Morett", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "4", "Fecha": "2026-10-01", "Local": "Niner Gang", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "4", "Fecha": "2026-10-01", "Local": "Ayahuascas boys", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "4", "Fecha": "2026-10-01", "Local": "AGUS", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "5", "Fecha": "2026-10-08", "Local": "Monsters of the Midway", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "5", "Fecha": "2026-10-08", "Local": "La mazaneta", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "5", "Fecha": "2026-10-08", "Local": "Kekas 25", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "5", "Fecha": "2026-10-08", "Local": "Broncos Polacos", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "5", "Fecha": "2026-10-08", "Local": "Mighty Eagles", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "6", "Fecha": "2026-10-15", "Local": "Niner Gang", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "6", "Fecha": "2026-10-15", "Local": "Kekas 25", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "6", "Fecha": "2026-10-15", "Local": "Seba IR", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "6", "Fecha": "2026-10-15", "Local": "Morett", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "6", "Fecha": "2026-10-15", "Local": "Ayahuascas boys", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "7", "Fecha": "2026-10-22", "Local": "Monsters of the Midway", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "7", "Fecha": "2026-10-22", "Local": "La mazaneta", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "7", "Fecha": "2026-10-22", "Local": "Mighty Eagles", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "7", "Fecha": "2026-10-22", "Local": "AGUS", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "7", "Fecha": "2026-10-22", "Local": "Ayahuascas boys", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "8", "Fecha": "2026-10-29", "Local": "Broncos Polacos", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "8", "Fecha": "2026-10-29", "Local": "Mighty Eagles", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "8", "Fecha": "2026-10-29", "Local": "Kekas 25", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "8", "Fecha": "2026-10-29", "Local": "Seba IR", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "8", "Fecha": "2026-10-29", "Local": "Morett", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "9", "Fecha": "2026-11-05", "Local": "La mazaneta", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "9", "Fecha": "2026-11-05", "Local": "AGUS", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "9", "Fecha": "2026-11-05", "Local": "Ayahuascas boys", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "9", "Fecha": "2026-11-05", "Local": "Niner Gang", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "9", "Fecha": "2026-11-05", "Local": "Morett", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "10", "Fecha": "2026-11-12", "Local": "Monsters of the Midway", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "10", "Fecha": "2026-11-12", "Local": "AGUS", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "10", "Fecha": "2026-11-12", "Local": "Mighty Eagles", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "10", "Fecha": "2026-11-12", "Local": "Broncos Polacos", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "10", "Fecha": "2026-11-12", "Local": "Kekas 25", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "11", "Fecha": "2026-11-19", "Local": "Morett", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "11", "Fecha": "2026-11-19", "Local": "La mazaneta", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "11", "Fecha": "2026-11-19", "Local": "Niner Gang", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "11", "Fecha": "2026-11-19", "Local": "Seba IR", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "11", "Fecha": "2026-11-19", "Local": "Kekas 25", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "12", "Fecha": "2026-11-26", "Local": "Monsters of the Midway", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "12", "Fecha": "2026-11-26", "Local": "Niner Gang", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "12", "Fecha": "2026-11-26", "Local": "Ayahuascas boys", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "12", "Fecha": "2026-11-26", "Local": "AGUS", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "12", "Fecha": "2026-11-26", "Local": "Mighty Eagles", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "13", "Fecha": "2026-12-03", "Local": "Mighty Eagles", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "13", "Fecha": "2026-12-03", "Local": "La mazaneta", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "13", "Fecha": "2026-12-03", "Local": "Seba IR", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "13", "Fecha": "2026-12-03", "Local": "Kekas 25", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "13", "Fecha": "2026-12-03", "Local": "Broncos Polacos", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "14", "Fecha": "2026-12-10", "Local": "AGUS", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "14", "Fecha": "2026-12-10", "Local": "Seba IR", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "14", "Fecha": "2026-12-10", "Local": "Morett", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "14", "Fecha": "2026-12-10", "Local": "Niner Gang", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "14", "Fecha": "2026-12-10", "Local": "Ayahuascas boys", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}];
+const DEMO_PROXIMOS = [{"Semana": "1", "Fecha": "2026-09-10", "Local": "Ayahuascas boys", "Visita": "Monsters of the Midway", "PtsLocal": 107.66, "PtsVisita": 145.16}, {"Semana": "1", "Fecha": "2026-09-10", "Local": "La mazaneta", "Visita": "AGUS", "PtsLocal": 127.26, "PtsVisita": 118.52}, {"Semana": "1", "Fecha": "2026-09-10", "Local": "Niner Gang", "Visita": "Mighty Eagles", "PtsLocal": 182.9, "PtsVisita": 164.56}, {"Semana": "1", "Fecha": "2026-09-10", "Local": "Morett", "Visita": "Broncos Polacos", "PtsLocal": 142.6, "PtsVisita": 101.16}, {"Semana": "1", "Fecha": "2026-09-10", "Local": "Seba IR", "Visita": "Kekas 25", "PtsLocal": 98.9, "PtsVisita": 98.56}, {"Semana": "2", "Fecha": "2026-09-17", "Local": "Monsters of the Midway", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "2", "Fecha": "2026-09-17", "Local": "Ayahuascas boys", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "2", "Fecha": "2026-09-17", "Local": "AGUS", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "2", "Fecha": "2026-09-17", "Local": "Mighty Eagles", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "2", "Fecha": "2026-09-17", "Local": "Broncos Polacos", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "3", "Fecha": "2026-09-24", "Local": "Kekas 25", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "3", "Fecha": "2026-09-24", "Local": "La mazaneta", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "3", "Fecha": "2026-09-24", "Local": "Morett", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "3", "Fecha": "2026-09-24", "Local": "Seba IR", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "3", "Fecha": "2026-09-24", "Local": "Broncos Polacos", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "4", "Fecha": "2026-10-01", "Local": "Monsters of the Midway", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "4", "Fecha": "2026-10-01", "Local": "Morett", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "4", "Fecha": "2026-10-01", "Local": "Niner Gang", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "4", "Fecha": "2026-10-01", "Local": "Ayahuascas boys", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "4", "Fecha": "2026-10-01", "Local": "AGUS", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "5", "Fecha": "2026-10-08", "Local": "Monsters of the Midway", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "5", "Fecha": "2026-10-08", "Local": "La mazaneta", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "5", "Fecha": "2026-10-08", "Local": "Kekas 25", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "5", "Fecha": "2026-10-08", "Local": "Broncos Polacos", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "5", "Fecha": "2026-10-08", "Local": "Mighty Eagles", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "6", "Fecha": "2026-10-15", "Local": "Niner Gang", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "6", "Fecha": "2026-10-15", "Local": "Kekas 25", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "6", "Fecha": "2026-10-15", "Local": "Seba IR", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "6", "Fecha": "2026-10-15", "Local": "Morett", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "6", "Fecha": "2026-10-15", "Local": "Ayahuascas boys", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "7", "Fecha": "2026-10-22", "Local": "Monsters of the Midway", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "7", "Fecha": "2026-10-22", "Local": "La mazaneta", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "7", "Fecha": "2026-10-22", "Local": "Mighty Eagles", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "7", "Fecha": "2026-10-22", "Local": "AGUS", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "7", "Fecha": "2026-10-22", "Local": "Ayahuascas boys", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "8", "Fecha": "2026-10-29", "Local": "Broncos Polacos", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "8", "Fecha": "2026-10-29", "Local": "Mighty Eagles", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "8", "Fecha": "2026-10-29", "Local": "Kekas 25", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "8", "Fecha": "2026-10-29", "Local": "Seba IR", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "8", "Fecha": "2026-10-29", "Local": "Morett", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "9", "Fecha": "2026-11-05", "Local": "La mazaneta", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "9", "Fecha": "2026-11-05", "Local": "AGUS", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "9", "Fecha": "2026-11-05", "Local": "Ayahuascas boys", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "9", "Fecha": "2026-11-05", "Local": "Niner Gang", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "9", "Fecha": "2026-11-05", "Local": "Morett", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "10", "Fecha": "2026-11-12", "Local": "Monsters of the Midway", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "10", "Fecha": "2026-11-12", "Local": "AGUS", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "10", "Fecha": "2026-11-12", "Local": "Mighty Eagles", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "10", "Fecha": "2026-11-12", "Local": "Broncos Polacos", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "10", "Fecha": "2026-11-12", "Local": "Kekas 25", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "11", "Fecha": "2026-11-19", "Local": "Morett", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "11", "Fecha": "2026-11-19", "Local": "La mazaneta", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "11", "Fecha": "2026-11-19", "Local": "Niner Gang", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "11", "Fecha": "2026-11-19", "Local": "Seba IR", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "11", "Fecha": "2026-11-19", "Local": "Kekas 25", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "12", "Fecha": "2026-11-26", "Local": "Monsters of the Midway", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "12", "Fecha": "2026-11-26", "Local": "Niner Gang", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "12", "Fecha": "2026-11-26", "Local": "Ayahuascas boys", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "12", "Fecha": "2026-11-26", "Local": "AGUS", "Visita": "Seba IR", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "12", "Fecha": "2026-11-26", "Local": "Mighty Eagles", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "13", "Fecha": "2026-12-03", "Local": "Mighty Eagles", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "13", "Fecha": "2026-12-03", "Local": "La mazaneta", "Visita": "Morett", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "13", "Fecha": "2026-12-03", "Local": "Seba IR", "Visita": "Niner Gang", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "13", "Fecha": "2026-12-03", "Local": "Kekas 25", "Visita": "Ayahuascas boys", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "13", "Fecha": "2026-12-03", "Local": "Broncos Polacos", "Visita": "AGUS", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "14", "Fecha": "2026-12-10", "Local": "AGUS", "Visita": "Monsters of the Midway", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "14", "Fecha": "2026-12-10", "Local": "Seba IR", "Visita": "La mazaneta", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "14", "Fecha": "2026-12-10", "Local": "Morett", "Visita": "Kekas 25", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "14", "Fecha": "2026-12-10", "Local": "Niner Gang", "Visita": "Broncos Polacos", "PtsLocal": "", "PtsVisita": ""}, {"Semana": "14", "Fecha": "2026-12-10", "Local": "Ayahuascas boys", "Visita": "Mighty Eagles", "PtsLocal": "", "PtsVisita": ""}];
+/* Relacion nombre <-> equipo (asi confirman asistencia en el chat, por nombre):
+   Monsters of the Midway - Fadl · Morett - Morett · La mazaneta - Maza · AGUS - Agus
+   Niner Gang - Mateos · Mighty Eagles - Pancho · Broncos Polacos - Checo
+   Kekas 25 - Julian · Ayahuascas boys - Lencho · Seba IR - Sebas
+   En la pagina solo se muestran los equipos. Cada evento nuevo se agrega como un renglon aqui. */
+const DEMO_EVENTOS_ASISTENCIA = [
+  { "Evento": "Draft", "Equipos": ["Monsters of the Midway","La mazaneta","AGUS","Niner Gang","Mighty Eagles","Broncos Polacos","Kekas 25","Ayahuascas boys"] },
+  { "Evento": "Semana 1", "Equipos": ["Mighty Eagles","Broncos Polacos","Seba IR","AGUS","Morett","Ayahuascas boys"] }
+];
 const DEMO_DRAFT  = [
   { "Pos": 1,  "Equipo": "Mighty Eagles",           "Jugador": "Jahmyr Gibbs (RB, DET)" },
   { "Pos": 2,  "Equipo": "Niner Gang",               "Jugador": "Bijan Robinson (RB, ATL)" },
@@ -527,7 +537,13 @@ const DEMO_DRAFT  = [
   { "Pos": 10, "Equipo": "Morett",                   "Jugador": "De'Von Achane (RB, MIA)" }
 ];
 // Resultado de la ultima semana ya jugada: ganador, penultimo y ultimo. Se llena en cuanto termine una semana.
-const DEMO_RESULTADO_SEMANA = null;
+const DEMO_RESULTADO_SEMANA = { "Semana": 1, "Ganador": "Niner Gang (182.9)", "Penultimo": "Seba IR (98.9)", "Ultimo": "Kekas 25 (98.56)" };
+// Movimientos de dinero semanales (mayor puntaje / penultimo / ultimo de TODA la liga, no del partido).
+const DEMO_MOVIMIENTOS = [
+  { "Semana": 1, "Manager": "Carlos Mateos Landeros", "Concepto": "Mayor puntaje de la semana (Niner Gang)", "Monto": 400 },
+  { "Semana": 1, "Manager": "Por definir - Seba IR", "Concepto": "Penultimo de la semana (Seba IR)", "Monto": -150 },
+  { "Semana": 1, "Manager": "Por definir - Kekas 25", "Concepto": "Ultimo de la semana (Kekas 25)", "Monto": -250 }
+];
 const DEMO_ESPN   = [
   {
     "Seccion": "Basicos",
@@ -1119,6 +1135,7 @@ const DEMO_TNF    = [
   <button role="tab" data-tab="saldos" aria-selected="false" aria-controls="saldos">Saldos</button>
   <button role="tab" data-tab="reglas" aria-selected="false" aria-controls="reglas">Reglamento</button>
   <button role="tab" data-tab="cal"    aria-selected="false" aria-controls="cal">Calendario TNF</button>
+  <button role="tab" data-tab="asist"  aria-selected="false" aria-controls="asist">Asistencias</button>
   <button role="tab" data-tab="espn"   aria-selected="false" aria-controls="espn">Reglas de ESPN</button>
 </div></nav>
 
@@ -1163,6 +1180,12 @@ const DEMO_TNF    = [
     <div class="sec-cab"><h2>Calendario TNF</h2><span class="sub">quién pone la cena cada jueves</span></div>
     <p class="sec-nota">El orden sale del draft. Thanksgiving lo organizan tres, y el jueves siguiente sigue el que va en la lista. Si no puedes tu fecha, cámbiala con alguien y avísale al comisionado.</p>
     <div id="cal-cont"></div>
+  </section>
+
+  <section id="asist" role="tabpanel" hidden>
+    <div class="sec-cab"><h2>Asistencias</h2><span class="sub">mínimo 7 en el año</span></div>
+    <p class="sec-nota">No cumplir con al menos 7 asistencias quita la posibilidad de seguir en la liga por al menos un año. Thanksgiving cuenta como 3 asistencias (una por juego) y el viaje anual cuenta 2.</p>
+    <div id="asist-cont"></div>
   </section>
 
   <section id="espn" role="tabpanel" hidden>
@@ -1567,6 +1590,32 @@ function tablaHTML(tabla, conRecord){
     <tbody>${filas}</tbody></table>`;
 }
 
+const MIN_ASISTENCIAS = 7;
+
+function pintarAsistencias(eventos, equipos){
+  const cont = document.getElementById('asist-cont');
+  if (!cont) return;
+  if (!eventos.length){
+    cont.innerHTML = `<div class="vacio"><strong>Todavía no hay asistencias registradas.</strong>
+      Se van sumando conforme pasen el draft, cada jueves, Thanksgiving y el viaje anual.</div>`;
+    return;
+  }
+  const conteo = new Map();
+  equipos.forEach(e => conteo.set(e, 0));
+  eventos.forEach(ev => ev.Equipos.forEach(eq => conteo.set(eq, (conteo.get(eq) || 0) + 1)));
+
+  const filas = [...conteo.entries()].sort((a,b) => b[1] - a[1]).map(([eq, n]) => {
+    const falta = MIN_ASISTENCIAS - n;
+    const cls = n >= MIN_ASISTENCIAS ? 'pos' : falta >= 5 ? 'neg' : '';
+    const txt = n >= MIN_ASISTENCIAS ? `${n}/${MIN_ASISTENCIAS} · cumplido` : `${n}/${MIN_ASISTENCIAS}`;
+    return `<div class="regla"><span class="t">${esc(eq)}</span><span class="m ${cls}">${txt}</span></div>`;
+  }).join('');
+
+  cont.innerHTML = `
+    <div class="sec-cab" style="margin-bottom:14px"><span class="sub">${eventos.length} evento${eventos.length===1?'':'s'} registrado${eventos.length===1?'':'s'}: ${eventos.map(e => esc(e.Evento)).join(', ')}</span></div>
+    <div class="bloque" style="max-width:520px">${filas}</div>`;
+}
+
 function pintarDraftOrden(draft){
   const cont = document.getElementById('draft-cont');
   if (!draft.length){
@@ -1657,6 +1706,7 @@ function estado(txt, vivo){
     const ins = leer(params).inscripcion;
     saldos = tabla.filter(t => t.Manager).map(t => ({Semana:0, Manager:t.Manager, Concepto:'Inscripción', Monto:ins}));
   }
+  saldos = saldos.concat(DEMO_MOVIMIENTOS);
 
   const r = leer(params);
   pintarBote(r);
@@ -1665,6 +1715,7 @@ function estado(txt, vivo){
   pintarRaya(tabla, saldos);
   pintarTabla(tabla);
   pintarDraftOrden(DEMO_DRAFT);
+  pintarAsistencias(DEMO_EVENTOS_ASISTENCIA, tabla.map(t => t.Equipo));
   pintarProximos(DEMO_PROXIMOS);
   pintarResultadoSemana(DEMO_RESULTADO_SEMANA);
   pintarMovs(saldos);
